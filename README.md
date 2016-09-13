@@ -1,3 +1,3 @@
 # MachineLearningBook
 
-Upto page 30 - Chapter 2
+Upto page 32 
