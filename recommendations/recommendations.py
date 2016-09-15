@@ -65,3 +65,27 @@ def sim_distance(prefs, person1, person2):
 
   return 1/(1 + sum_of_squares)
 
+# Returns the Pearson correlation coefficient for p1 and p2
+def sim_pearson(prefs, p1, p2):
+  si = {}
+  for item in prefs[p1]:
+    if item in prefs[p2]: si[item] = 1
+
+  n = len(si)
+
+  if n == 0: return 0
+
+  sum1 = sum([prefs[p1][it] for it in si])
+  sum2 = sum([prefs[p2][it] for it in si])
+
+  sum1_sq = sum([pow(prefs[p1][it], 2) for it in si])
+  sum2_sq = sum([pow(prefs[p2][it], 2) for it in si])
+
+  p_sum = sum([prefs[p1][it]*prefs[p2][it] for it in si])
+
+  num = p_sum - (sum1 * sum2 / n)
+  den = sqrt((sum1_sq - pow(sum1, 2)/n) * (sum2_sq - pow(sum2, 2)/n))
+  if den == 0: return 0
+
+  return num/den
+
