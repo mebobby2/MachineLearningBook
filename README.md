@@ -1,5 +1,5 @@
 # MachineLearningBook
 
-Upto page 34
+Upto page 40
 
-Pearson Correlation Score 
+Matching Products
