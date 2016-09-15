@@ -1,5 +1,5 @@
 # MachineLearningBook
 
-Upto page 40
+Upto page 43
 
-Matching Products
+The del.icio.us API
