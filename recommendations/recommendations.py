@@ -52,7 +52,7 @@ critics = {'Lisa Rose':
 
 from math import sqrt
 
-# Returns a distance-based similarity score for person1 and person2
+# Returns a distance-based similarity score for person1 and person2 using Euclidean Distance Score
 def sim_distance(prefs, person1, person2):
   si = {}
   for item in prefs[person1]:
