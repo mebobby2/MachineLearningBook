@@ -1,7 +1,15 @@
 # MachineLearningBook
 
-Source code for book:
+## How to run code (example)
+1. Navigate to directory, eg cd path/recommendations
+2. python
+3. from mockdelicious import get_popular
+4. get_popular('devops')
+
+## Source code for book
 https://github.com/arthur-e/Programming-Collective-Intelligence
+
+## Upto
 
 Upto page 44
 
