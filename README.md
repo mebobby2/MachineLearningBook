@@ -17,4 +17,4 @@ Upto page 44
 This can be used to build a dataset similar to the critics dictionary you created by
 hand at the beginning of this chapter
 
-Before that, write a mock delicious api class which mocks the delicious api
+Before that, check if your mock delicious lib is ready to be used by the deliciousrec.py script
