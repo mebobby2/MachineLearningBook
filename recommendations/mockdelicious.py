@@ -1,4 +1,5 @@
 import random
+from random import randint
 from sets import Set
 
 sites = [
@@ -113,9 +114,9 @@ def get_urlposts(site_href):
   return random.choice(users)
 
 def get_userposts(user):
-  num_posts = randint(0,4)
+  num_posts = randint(1,4)
   user_posts = Set([])
-  while user_posts.length < num_posts:
+  while len(user_posts) < num_posts:
     site = random.choice(sites)
     user_posts.add(site['href'])
   extracter = lambda site: {'href': site}
