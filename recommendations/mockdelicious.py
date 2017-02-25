@@ -111,7 +111,7 @@ def get_popular(tag = None):
   return tagged_sites;
 
 def get_urlposts(site_href):
-  return random.choice(users)
+  return [random.choice(users)]
 
 def get_userposts(user):
   num_posts = randint(1,4)

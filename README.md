@@ -12,9 +12,6 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 44
+Upto page 45
 
-This can be used to build a dataset similar to the critics dictionary you created by
-hand at the beginning of this chapter
-
-Before that, check if your mock delicious lib is ready to be used by the deliciousrec.py script
+Item-Based Filtering
