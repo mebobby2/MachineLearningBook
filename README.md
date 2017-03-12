@@ -12,6 +12,6 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 45
+Upto page 48
 
-Item-Based Filtering
+Using the MovieLens Dataset
