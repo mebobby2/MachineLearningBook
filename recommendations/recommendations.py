@@ -1,49 +1,49 @@
 # A dictionary of movie critics and their ratings of a small
 # set of movies
-critics = {'Lisa Rose': 
-            {'Lady in the Water': 2.5, 
+critics = {'Lisa Rose':
+            {'Lady in the Water': 2.5,
              'Snakes on a Plane': 3.5,
-             'Just My Luck': 3.0, 
-             'Superman Returns': 3.5, 
+             'Just My Luck': 3.0,
+             'Superman Returns': 3.5,
              'You, Me and Dupree': 2.5,
              'The Night Listener': 3.0
             },
-          'Gene Seymour': 
-            {'Lady in the Water': 3.0, 
+          'Gene Seymour':
+            {'Lady in the Water': 3.0,
              'Snakes on a Plane': 3.5,
-             'Just My Luck': 1.5, 
-             'Superman Returns': 5.0, 
+             'Just My Luck': 1.5,
+             'Superman Returns': 5.0,
              'The Night Listener': 3.0,
              'You, Me and Dupree': 3.5
             },
-          'Michael Phillips': 
-            {'Lady in the Water': 2.5, 
+          'Michael Phillips':
+            {'Lady in the Water': 2.5,
              'Snakes on a Plane': 3.0,
-             'Superman Returns': 3.5, 
+             'Superman Returns': 3.5,
              'The Night Listener': 4.0},
-          'Claudia Puig': 
-            {'Snakes on a Plane': 3.5, 
+          'Claudia Puig':
+            {'Snakes on a Plane': 3.5,
              'Just My Luck': 3.0,
-             'The Night Listener': 4.5, 
+             'The Night Listener': 4.5,
              'Superman Returns': 4.0,
              'You, Me and Dupree': 2.5
             },
-          'Mick LaSalle': 
-            {'Lady in the Water': 3.0, 
+          'Mick LaSalle':
+            {'Lady in the Water': 3.0,
              'Snakes on a Plane': 4.0,
-             'Just My Luck': 2.0, 
-             'Superman Returns': 3.0, 
+             'Just My Luck': 2.0,
+             'Superman Returns': 3.0,
              'The Night Listener': 3.0,
              'You, Me and Dupree': 2.0
              },
-          'Jack Matthews': 
-            {'Lady in the Water': 3.0, 
+          'Jack Matthews':
+            {'Lady in the Water': 3.0,
              'Snakes on a Plane': 4.0,
-             'The Night Listener': 3.0, 
-             'Superman Returns': 5.0, 
+             'The Night Listener': 3.0,
+             'Superman Returns': 5.0,
              'You, Me and Dupree': 3.5
             },
-          'Toby': 
+          'Toby':
             {'Snakes on a Plane':4.5,
              'You, Me and Dupree':1.0,
              'Superman Returns':4.0
@@ -92,7 +92,7 @@ def sim_pearson(prefs, p1, p2):
 # Returns the best matches for person from prefs dictionary
 def top_matches(prefs, person, n = 5, similarity = sim_pearson):
   scores = [(similarity(prefs, person, other), other) for other in prefs if other != person]
-  
+
   scores.sort()
   scores.reverse()
   return scores[0:n]
@@ -129,9 +129,50 @@ def transform_prefs(prefs):
   return result
 
 
+def calculate_similar_items(prefs, n = 10):
+  # Create a dictionary of items showings which other items they
+  # are most similar to
+  result = {}
+
+  # Invert the preference matrix to be item-centric
+  itemPrefs = transform_prefs(prefs)
+  c = 0
+  for item in itemPrefs:
+    c += 1
+    if c % 100 == 0: print "%d / %d" % (c, len(itemPrefs))
+    # Find the most similar items to this one
+    scores = top_matches(itemPrefs, item, n = n, similarity = sim_distance)
+    result[item] = scores
+  return result
 
 
+def get_recommended_items(prefs, items_match, user):
+  user_ratings = prefs[user]
+  scores = {}
+  total_sim = {}
 
+  # Loop over items rated by this user
+  for (item, rating) in user_ratings.items():
+    # Loop over items similar to this one
+    for (similarity, item2) in items_match[item]:
+      # Ignore if this user has already rated this item
+      if item2 in user_ratings: continue
+
+      # Weighted sum of rating times similarity
+      scores.setdefault(item2, 0)
+      scores[item2] += similarity * rating
+
+      # Sum of all the similarities
+      total_sim.setdefault(item2, 0)
+      total_sim[item2] += similarity
+
+  # Divde each total score by total weighting to get an average
+  rankings = [(score/total_sim[item], item) for item, score in scores.items()]
+
+  # Return the rankings from the highest to lowest
+  rankings.sort()
+  rankings.reverse()
+  return rankings
 
 
 
