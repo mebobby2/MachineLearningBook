@@ -174,11 +174,26 @@ def get_recommended_items(prefs, items_match, user):
   rankings.reverse()
   return rankings
 
+def load_movie_lens(path = 'ml-100k'):
+  movies = {}
+  for line in open(path + '/u.item'):
+    (id, title) = line.split('|')[0:2]
+    movies[id] = title
+
+  prefs = {}
+  for line in open(path + '/u.data'):
+    (user, movieid, rating, ts) = line.split('\t')
+    prefs.setdefault(user, {})
+    prefs[user][movies[movieid]] = float(rating)
+  return prefs
 
 
+# To use:
+# 1. prefs = load_movie_lens()
+# 2. get_recommendations(prefs, '87')[0:30] (user based)
 
-
-
+# 3. itemsim = calculate_similar_items(prefs, n = 50)
+# 4. get_recommended_items(prefs, itemsim, '87')[0:30] (item based)
 
 
 
