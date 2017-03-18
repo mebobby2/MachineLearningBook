@@ -18,6 +18,4 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 51
-
-Exercises
+Upto page 52
