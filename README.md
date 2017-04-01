@@ -6,6 +6,7 @@
 3. from mockdelicious import *
 4. get_popular('devops')
 5. exit()
+6. To run a python script: python script.py
 
 ## Notes
 
@@ -24,4 +25,7 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 52
+Upto page 56
+Hierarchical Clustering
+
+Before that: find at least 100 rss feeds, put the urls into feedlist.txt and test out generatefeedvector.py
