@@ -2,7 +2,7 @@ import feedparser
 import re
 
 # Retrusn title and dictionary of word counts for an RSS feed
-def getwordcounts(url)
+def getwordcounts(url):
   d = feedparser.parse(url)
   wc = {}
 
@@ -16,7 +16,7 @@ def getwordcounts(url)
       wc[word] += 1
   return d.feed.title, wc
 
-def getwords(html)
+def getwords(html):
   # Remove all the HTML tags
   txt = re.compile(r'<[^>]+>').sub(''. html)
 

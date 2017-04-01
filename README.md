@@ -5,8 +5,19 @@
 2. python
 3. from mockdelicious import *
 4. get_popular('devops')
-5. exit()
+5. exit() or CTR-D
 6. To run a python script: python script.py
+
+## Installing Packages
+
+Use pip to install packages you need.
+
+```which python``` on my machine gives ```/usr/local/bin/python```.
+/usr/bin/python is the executable for the python that comes with OS X. /usr/local/lib is a location for user-installed programs only, possibly from Python.org or Homebrew.
+
+When you use ```pip install package_name``` you are installing it for the /usr/bin/python version, so when you run your python script and it loads a package, you will get a load error. Since your system default python is ```/usr/local/bin/python```.
+
+In order to make sure you use the pip associated with a particular python, you can run ```python -m pip install package_name```, or go look at what the pip on your path is, or is symlinked to. This will install the package into ```usr/local/lib/python2.7/site-packages``` which is then picked up by ```/usr/local/bin/python```.
 
 ## Notes
 

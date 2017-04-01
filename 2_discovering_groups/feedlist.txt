@@ -1,0 +1,12 @@
+https://apod.nasa.gov/apod.rss
+http://www.allaboutsymbian.com/rss/news/aas-feed-summary-all.xml
+http://www.snopes.com/feed
+http://designcollector.net/likes?format=RSS
+http://postsecret.com/feed
+http://smartbitchestrashybooks.com/feed
+https://science.nasa.gov/rss.xml
+https://www.dnalounge.com/backstage/log/feed
+http://rudepundit.blogspot.com/atom.xml
+http://daviddfriedman.blogspot.com/atom.xml
+http://cynthialeitichsmith.blogspot.com/atom.xml
+http://cf.factcheck.org/feed/`
