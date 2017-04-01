@@ -40,4 +40,3 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 Upto page 56
 Hierarchical Clustering
 
-Before that: Test out generatefeedvector.py and see if it generates blogdata.txt
