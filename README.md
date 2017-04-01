@@ -40,4 +40,4 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 Upto page 56
 Hierarchical Clustering
 
-Before that: find at least 100 rss feeds, put the urls into feedlist.txt and test out generatefeedvector.py
+Before that: Test out generatefeedvector.py and see if it generates blogdata.txt
