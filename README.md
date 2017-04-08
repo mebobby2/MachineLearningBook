@@ -49,6 +49,6 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 56
-Hierarchical Clustering
+Upto page 61
+Drawing the Dendrogram
 
