@@ -1,19 +1,25 @@
+# To run:
+# 1. from 2_discovering_groups directory
+# 2. python
+# 3. import clusters
+# 4. blognames,words,data=clusters.readfile('blogdata.txt')
+# 5. clust=clusters.hcluster(data)
+
 from math import sqrt
 
 def readfile(filename):
-  lines = [line for line in file(filename)]
-
+  lines=[line for line in file(filename)]
   # First line is the column titles
-  colnames = lines[0].strip().split('\t')[1:]
-  rownames = []
-  data = []
+  colnames=lines[0].strip( ).split('\t')[1:]
+  rownames=[]
+  data=[]
   for line in lines[1:]:
-    p = line.strip().split('\t')
+    p=line.strip( ).split('\t')
     # First column in each row is the rowname
     rownames.append(p[0])
     # The data for this row is the remainder of the row
     data.append([float(x) for x in p[1:]])
-  return rownames, colnames, data
+  return rownames,colnames,data
 
 def pearson(v1,v2):
   # Simple sums
@@ -41,3 +47,47 @@ class bicluster:
     self.vec = vec
     self.id = id
     self.distance = distance
+
+def hcluster(rows,distance=pearson):
+  distances={}
+  currentclustid=-1
+  # Clusters are initially just the rows
+  clust=[bicluster(rows[i],id=i) for i in range(len(rows))]
+  while len(clust)>1:
+    lowestpair=(0,1)
+    closest=distance(clust[0].vec,clust[1].vec)
+    # loop through every pair looking for the smallest distance
+    for i in range(len(clust)):
+      for j in range(i+1,len(clust)):
+        # distances is the cache of distance calculations
+        if (clust[i].id,clust[j].id) not in distances:
+          distances[(clust[i].id,clust[j].id)]=distance(clust[i].vec,clust[j].vec)
+        d=distances[(clust[i].id,clust[j].id)]
+        if d<closest:
+          closest=d
+          lowestpair=(i,j)
+    # calculate the average of the two clusters
+    mergevec=[
+    (clust[lowestpair[0]].vec[i]+clust[lowestpair[1]].vec[i])/2.0
+    for i in range(len(clust[0].vec))]
+    # create the new cluster
+    newcluster=bicluster(mergevec,left=clust[lowestpair[0]],
+                          right=clust[lowestpair[1]],
+                          distance=closest,id=currentclustid)
+    # cluster ids that weren't in the original set are negative
+    currentclustid-=1
+    del clust[lowestpair[1]]
+    del clust[lowestpair[0]]
+    clust.append(newcluster)
+  return clust[0]
+
+
+
+
+
+
+
+
+
+
+
