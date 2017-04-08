@@ -52,4 +52,5 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 Upto page 63
 To generate the image, go to your Python session and enter:
 
-
+Before that: find out why PIL not loading __imaging.so
+http://effbot.org/zone/pil-imaging-not-installed.htm
