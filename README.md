@@ -49,6 +49,7 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 61
-Drawing the Dendrogram
+Upto page 63
+To generate the image, go to your Python session and enter:
+
 
