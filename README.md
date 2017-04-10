@@ -52,3 +52,4 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 Upto page 63
 Column Clustering
 
+Before that: look at blogclust.jpg and analyze the results
