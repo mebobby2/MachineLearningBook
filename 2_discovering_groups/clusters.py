@@ -245,7 +245,7 @@ def kcluster(rows,distance=pearson,k=4):
 ##### Multidimentional scaling
 
 # To run:
-# 1. import cluster
+# 1. import clusters
 # 2. blognames,words,data=clusters.readfile('blogdata.txt')
 # 3. coords=clusters.scaledown(data)
 # 4. clusters.draw2d(coords,blognames,jpeg='blogs2d.jpg')
