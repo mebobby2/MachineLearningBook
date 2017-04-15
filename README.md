@@ -57,6 +57,12 @@ Some insights derivied from column clustering: these words formed a cluster, mea
 3. national, government, against
 4. 1, 2, and 3 all formed a larger cluster
 
+### K-Means Clustering
+
+Hierarchical clustering gives a nice tree as a result, but it has a couple of disadvan- tages. The tree view doesn’t really break the data into distinct groups without additional work, and the algorithm is extremely computationally intensive. Because the relationship between every pair of items must be calculated and then recalculated when items are merged, the algorithm will run slowly on very large datasets.
+
+An alternative method of clustering is K-means clustering. This type of algorithm is quite different from hierarchical clustering because it is told in advance how many distinct clusters to generate. The algorithm will determine the size of the clusters based on the structure of the data.
+
 
 
 ## Source code for book
