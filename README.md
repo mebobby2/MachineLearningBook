@@ -28,6 +28,21 @@ If you are dealing with data where the actual difference in values of attributes
 
 In the blogs exercise, some blogs contain more entries or much longer entries than others, and will thus contain more words overall. The Pearson correlation will correct for this, since it really tries to determine how well two sets of data fit onto a straight line.
 
+### Tanimoto coefficient
+The Pearson correlation works well for the blog dataset where the values are actual word counts. However, this dataset just has 1s and 0s for presence or absence, and it would be more useful to define some measure of overlap between the people who want two items. For this, there is a measure called the Tanimoto coefficient, which is the ratio of the intersection set (only the items that are in both sets) to the union set (all the items in either set).
+
+```
+def tanamoto(v1,v2):
+  c1,c2,shr=0,0,0
+  for i in range(len(v1)):
+    if v1[i]!=0: c1+=1 # in v1
+    if v2[i]!=0: c2+=1 # in v2
+    if v1[i]!=0 and v2[i]!=0: shr+=1 # in both
+  return 1.0-(float(shr)/(c1+c2-shr))
+```
+
+This will return a value between 1.0 and 0.0. A value of 1.0 indicates that nobody who wants the first item wants the second one, and 0.0 means that exactly the same set of people want the two items.
+
 ### User based or item based filtering
 
 Item-based filtering is significantly faster than user-based when getting a list of recommendations for a large dataset, but it does have the additional overhead of main- taining the item similarity table. Also, there is a difference in accuracy that depends on how “sparse” the dataset is. In the movie example, since every critic has rated nearly every movie, the dataset is dense (not sparse). On the other hand, it would be unlikely to find two people with the same set of del.icio.us bookmarks—most book- marks are saved by a small group of people, leading to a sparse dataset. Item-based filtering usually outperforms user-based filtering in sparse datasets, and the two per- form about equally in dense datasets.

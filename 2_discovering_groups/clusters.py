@@ -1,3 +1,4 @@
+## BLOGS
 # To run:
 # 1. from 2_discovering_groups directory
 # 2. python
@@ -18,6 +19,13 @@
 # 2. blognames,words,data=clusters.readfile('blogdata.txt')
 # 3. kclust=clusters.kcluster(data,k=10)
 # 4. To get the names of the blogs inside a cluster: [blognames[r] for r in kclust[2]]
+
+## Zebo data
+# To run:
+# 1. import clusters
+# 2. wants,people,data=clusters.readfile('zebo.txt')
+# 3. clust=clusters.hcluster(data,distance=clusters.tanamoto)
+# 4. clusters.drawdendrogram(clust,wants)
 
 from math import sqrt
 from PIL import Image,ImageDraw
@@ -56,6 +64,14 @@ def pearson(v1,v2):
   if den==0: return 0
 
   return 1.0 - num/den
+
+def tanamoto(v1,v2):
+  c1,c2,shr=0,0,0
+  for i in range(len(v1)):
+    if v1[i]!=0: c1+=1 # in v1
+    if v2[i]!=0: c2+=1 # in v2
+    if v1[i]!=0 and v2[i]!=0: shr+=1 # in both
+  return 1.0-(float(shr)/(c1+c2-shr))
 
 # data is a double matrix ie an array of arrays.
 # r1 = data[0]; all the word counts of a blog.
