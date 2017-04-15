@@ -42,7 +42,22 @@ Clustering is an example of unsupervised learning. Unlike a neural network or a 
 
 Hierarchical clustering builds up a hierarchy of groups by continuously merging the two most similar groups. Each of these groups starts as a single item. In each iteration this method calculates the distances between every pair of groups, and the closest ones are merged together to form a new group. This is repeated until there is only one group.
 
-A dendrogram is a visualization of hierarchical clustering
+A dendrogram is a visualization of hierarchical clustering.
+
+Some insights derivied from heirarchical clustering: It closely clustered these blogs together: Official google blog, search engine roundtable, google operating system, google blogoscoped.
+
+### Column clustering
+It’s often necessary to cluster on both the rows and the columns. In a marketing study, it can be interesting to group people to find demographics and products, or perhaps to determine shelf locations of items that are commonly bought together. In the blog dataset, the columns represent words, and it’s potentially interesting to see which words are commonly used together.
+
+One important thing to realize about clustering is that if you have many more items than variables, the likelihood of nonsensical clusters increases. There are many more words than there are blogs, so you’ll notice more reasonable patterns in the blog clustering than in the word clustering.
+
+Some insights derivied from column clustering: these words formed a cluster, meaning, they were mentioned the same number of times across all blogs.
+1. iraq, war
+2. president, bush
+3. national, government, against
+4. 1, 2, and 3 all formed a larger cluster
+
+
 
 ## Source code for book
 https://github.com/arthur-e/Programming-Collective-Intelligence

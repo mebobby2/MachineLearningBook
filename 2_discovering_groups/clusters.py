@@ -6,6 +6,13 @@
 # 5. clust=clusters.hcluster(data)
 # 6. clusters.drawdendrogram(clust,blognames,jpeg='blogclust.jpg')
 
+# To run column clustering:
+# 1. import clusters
+# 2. blognames,words,data=clusters.readfile('blogdata.txt')
+# 3. rdata=clusters.rotatematrix(data)
+# 4. wordclust=clusters.hcluster(rdata)
+# 5. clusters.drawdendrogram(wordclust,labels=words,jpeg='wordclust.jpg')
+
 from math import sqrt
 from PIL import Image,ImageDraw
 
@@ -42,6 +49,19 @@ def pearson(v1,v2):
   if den==0: return 0
 
   return 1.0 - num/den
+
+# data is a double matrix ie an array of arrays.
+# r1 = data[0]; all the word counts of a blog.
+# r1 = an array containing the word counts
+# e.g [ [1 2 3] [4 5 6]]
+# after rotatematrix becomes [ [1 4] [2 5] [3 6] ]
+
+def rotatematrix(data):
+  newdata=[]
+  for i in range(len(data[0])):
+    newrow=[data[j][i] for j in range(len(data))]
+    newdata.append(newrow)
+  return newdata
 
 class bicluster:
   def __init__(self, vec, left = None, right = None, distance = 0.0, id = None):
