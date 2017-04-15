@@ -94,4 +94,5 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 77
+Upto page 80
+The crawler will use the Beautiful Soup API that was introduced in Chapter 3
