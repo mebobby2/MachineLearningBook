@@ -63,6 +63,10 @@ Hierarchical clustering gives a nice tree as a result, but it has a couple of di
 
 An alternative method of clustering is K-means clustering. This type of algorithm is quite different from hierarchical clustering because it is told in advance how many distinct clusters to generate. The algorithm will determine the size of the clusters based on the structure of the data.
 
+Some insights derived from k-means:
+The blogs were all found to be in one cluster:
+'Publishing 2.0', 'GigaOM', "John Battelle's Searchblog", 'Google Operating System', 'Valleywag', 'Search Engine Watch Blog', 'Techdirt', 'Official Google Blog', 'Search Engine Roundtable', 'PaulStamatiou.com', 'A Consuming Experience (full feed)', 'Matt Cutts: Gadgets, Google, and SEO', 'Google Blogoscoped', 'Read/WriteWeb'
+
 
 
 ## Source code for book

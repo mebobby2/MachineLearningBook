@@ -13,6 +13,12 @@
 # 4. wordclust=clusters.hcluster(rdata)
 # 5. clusters.drawdendrogram(wordclust,labels=words,jpeg='wordclust.jpg')
 
+# To run k-means clustering:
+# 1. import clusters
+# 2. blognames,words,data=clusters.readfile('blogdata.txt')
+# 3. kclust=clusters.kcluster(data,k=10)
+# 4. To get the names of the blogs inside a cluster: [blognames[r] for r in kclust[2]]
+
 from math import sqrt
 from PIL import Image,ImageDraw
 import random
