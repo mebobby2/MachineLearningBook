@@ -76,5 +76,3 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 Upto page 67
 Clusters of Preferences
-
-Before that: Understand the algo for k-means
