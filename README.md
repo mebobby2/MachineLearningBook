@@ -74,7 +74,7 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 63
-Column Clustering
+Upto page 67
+Clusters of Preferences
 
-Before that: look at blogclust.jpg and analyze the results
+Before that: Understand the algo for k-means
