@@ -104,5 +104,9 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 81
-Building the Index
+Upto page 85
+Now you can rerun the crawler and have it actually index the pages as it goes. You can do this in your interactive session
+
+Before that:
+
+find out where script is crashing and getting a page parsing error.
