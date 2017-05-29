@@ -5,6 +5,12 @@ import sqlite3 as sqlite
 
 ignorewords = set(['the', 'of', 'to', 'and', 'a', 'in', 'is', 'it'])
 
+# Usage:
+# 1. import searchengine
+# 2. crawler=searchengine.crawler('searchindex.db')
+# 3. crawler.createindextables
+# 4. crawler.crawl(['url_link'])
+
 class crawler:
   # Initialize the crawler with the name of the database
   def __init__(self, dbname):
@@ -26,11 +32,22 @@ class crawler:
 
   # Extract the text from an HTML page (no tags)
   def gettextonly(self, soup):
-    return None
+    v=soup.string
+    if v == None:
+      c=soup.contents
+      resulttext=''
+      for t in c:
+        subtext=self.gettextonly(t)
+        resulttext+=subtext+'\n'
+      return resulttext
+    else:
+      return v.strip()
 
-  # Separate the words by any non-whitespace character
+  # Separate the words by any nonalphanumeric character
+  # i.e. anything special character that is not a letter or number e.g. [,.<
   def separatewords(self, text):
-    return None
+    splitter=re.compile('\\W*')
+    return [s.lower() for s in splitter.split(text) if s!='']
 
   # Return true if this url is already indexed
   def isindexed(self, url):
@@ -72,10 +89,19 @@ class crawler:
 
       pages=newpages
 
-
   # Create the database tables
   def createindextables(self):
-    pass
+    self.con.execute('create table urllist(url)')
+    self.con.execute('create table wordlist(word)')
+    self.con.execute('create table wordlocation(urlid,wordid,location)')
+    self.con.execute('create table link(fromid integer,toid integer)')
+    self.con.execute('create table linkwords(wordid,linkid)')
+    self.con.execute('create index wordidx on wordlist(word)')
+    self.con.execute('create index urlidx on urllist(url)')
+    self.con.execute('create index wordurlidx on wordlocation(wordid)')
+    self.con.execute('create index urltoidx on link(toid)')
+    self.con.execute('create index urlfromidx on link(fromid)')
+    self.dbcommit()
 
 
 
