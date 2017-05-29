@@ -75,6 +75,8 @@ class crawler:
           links=soup('a')
           for link in links:
             if ('href' in dict(link.attrs)):
+              #E.g. urljoin('http://google.com', 'www.haha.org') gives http://google.com/www.haha.org
+              #But url = urljoin('http://google.com', '//www.haha.org') gives http://www.haha.org
               url=urljoin(page,link['href'])
               if url.find("'")!=-1: continue
               url=url.split('#')[0]  # remove location portion
