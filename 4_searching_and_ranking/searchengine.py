@@ -1,18 +1,20 @@
 import urllib2
 from bs4 import BeautifulSoup
 from urlparse import urljoin
+import sqlite3 as sqlite
 
 ignorewords = set(['the', 'of', 'to', 'and', 'a', 'in', 'is', 'it'])
 
 class crawler:
   # Initialize the crawler with the name of the database
   def __init__(self, dbname):
-    pass
+    self.con = sqlite.connect(dbname)
 
   def __del__(self):
-    pass
+    self.con.close()
+
   def dbcommit(self):
-    pass
+    self.con.commit()
 
   # Auxilliary function for getting an entry id and adding it if it's not present
   def getentryid(self, table, field, value, createnew = True):
