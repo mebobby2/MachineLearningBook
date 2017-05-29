@@ -9,6 +9,12 @@
 6. To run a python script: python script.py
 7. To install a packege: python -m pip install feedparser
 
+## Run a class
+1. Repeat steps 1 and 2 from above
+2. import searchengine
+3. crawler=searchengine.crawler('db_name')
+4. crawler.crawl(pagelist)
+
 ## Installing Packages
 
 Use pip to install packages you need.
