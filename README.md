@@ -108,6 +108,4 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 ## Upto
 
 Upto page 87
-Try calling this function with your first multiple-word search:
-
-before that: figure out ```e.getmatchrows('functional programming')``` is returning ```sqlite3.DatabaseError: database disk image is malformed```
+Content-Based Ranking
