@@ -26,6 +26,9 @@ When you use ```pip install package_name``` you are installing it for the /usr/b
 
 In order to make sure you use the pip associated with a particular python, you can run ```python -m pip install package_name```, or go look at what the pip on your path is, or is symlinked to. This will install the package into ```usr/local/lib/python2.7/site-packages``` which is then picked up by ```/usr/local/bin/python```.
 
+### pip on new machines
+stick with the default python installation at ```/usr/bin/python```. Do not install another version of python. Install pip by downloading ```wget https://bootstrap.pypa.io/get-pip.py``` and running it with ```sudo python get-pip.py```. When you install a package using pip, use the command ```sudo pip install bs4```. As long as you don't install another verison of python and use the default one that comes with the OS, you don't need any of that funky stuff in the above section.
+
 ### pysqlite
 
 As of python version 2.5 and up, a working version of pysqlite 2, bundled as sqlite3, is available from within the language. So you don't need to install it as an external package.
