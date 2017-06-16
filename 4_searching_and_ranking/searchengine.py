@@ -10,7 +10,7 @@ ignorewords = set(['the', 'of', 'to', 'and', 'a', 'in', 'is', 'it'])
 # 1. import searchengine
 # 2. crawler=searchengine.crawler('searchindex.db')
 # 3. crawler.createindextables()
-# 4. crawler.crawl(['https://en.wikipedia.org/wiki/Game_of_Thrones'])
+# 4. crawler.crawl(['http://gameofthrones.wikia.com/wiki/Game_of_Thrones_Wiki'])
 # 5. To check if the crawling worked or not:
 #      [row for row in crawler.con.execute('select rowid from wordlocation where wordid=1')]
 
