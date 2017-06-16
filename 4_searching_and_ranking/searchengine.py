@@ -171,11 +171,14 @@ class searcher:
         tablenumber+=1
 
     # Create the query from the separate parts
+    if tablelist == '':
+      return [], wordids
+
     fullquery = 'select %s from %s where %s' % (fieldlist, tablelist, clauselist)
     cur = self.con.execute(fullquery)
     rows = [row for row in cur]
 
-    return rows, wordids
+    return rows, wordids #returns a tuple i.e. (rows, wordids)
 
   def __del__(self):
     self.con.close()
