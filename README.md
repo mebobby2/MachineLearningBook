@@ -100,6 +100,12 @@ Used to find a two-dimensional representation of the dataset. Since most real-li
 
 The concept of imagining items in space depending on their parameters will be a recurring theme in this book. Using multidimensional scaling is an effective way to take a dataset and actually view it in a way that’s easy to interpret. It’s important to realize that some information is lost in the process of scaling, but the result should help you understand the algorithms better.
 
+### Content-Based Ranking
+A score for a search item result is calculated based on 3 metrics:
+Word frequency - The number of times the words in the query appear in the document can help determine how relevant the document is.
+Document location - The main subject of a document will probably appear near the beginning of the document.
+Word distance - If there are multiple words in the query, they should appear close together in the document.
+
 
 
 ## Source code for book

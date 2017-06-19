@@ -144,6 +144,29 @@ class searcher:
   def __init__(self,dbname):
     self.con = sqlite.connect(dbname)
 
+  def getscoredlist(self, rows, wordids):
+    totalscores = dict([(row[0],0) for row in rows])
+
+    #This is where you'll later put the scoring functions
+    weights = []
+
+    for (weight,scores) in weights:
+      for url in totalscores:
+        totalscores[url] += weight * scores[url]
+
+    return totalscores
+
+  def geturlname(self,id):
+    return self.con.execute("select url from urllist where rowid=%d" % id).fetchone()[0]
+
+  def query(self,q):
+    rows, wordids = self.getmatchrows(q)
+    scores = self.getscoredlist(rows, wordids)
+    # Python has supports keyword arguments. sorted has a keyword argument called reverse
+    rankedscores = sorted([(score, url) for (url,score) in scores.items()], reverse = 1)
+    for (score, urlid) in rankedscores[0:10]:
+      print '%f\t%s' % (score, self.geturlname(urlid))
+
   def getmatchrows(self,q):
     # Strings to build the query
     fieldlist = 'w0.urlid'
