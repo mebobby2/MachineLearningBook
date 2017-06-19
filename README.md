@@ -115,5 +115,5 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 93
-The PageRank Algorithm
+Upto page 96
+Using the Link Text
