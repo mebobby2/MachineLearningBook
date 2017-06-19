@@ -150,7 +150,9 @@ class searcher:
     #This is where you'll later put the scoring functions
     # weights = []
     # weights = [(1.0, self.frequencyscore(rows))]
-    weights = [(1.0, self.locationscore(rows))]
+    # weights = [(1.0, self.locationscore(rows))]
+    weights = [(1.0, self.frequencyscore(rows)),
+               (1.5, self.locationscore(rows))]
 
     for (weight,scores) in weights:
       for url in totalscores:

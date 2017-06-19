@@ -42,3 +42,18 @@ e.query('tyrion lannister')
 0.002142  http://gameofthrones.wikia.com/wiki/King%27s_Landing
 0.002138  http://gameofthrones.wikia.com/wiki/Sansa_Stark
 0.002133  http://gameofthrones.wikia.com/wiki/Qyburn
+
+4. Content-Based Ranking, Document Location (weight=1.5) + Word Frequency (weight=1)
+
+2.500000  http://gameofthrones.wikia.com/wiki/Tyrion_Lannister
+0.100356  http://gameofthrones.wikia.com/wiki/Cersei_Lannister
+0.099821  http://gameofthrones.wikia.com/wiki/Jaime_Lannister
+0.082276  http://gameofthrones.wikia.com/wiki/House_Lannister
+0.062945  http://gameofthrones.wikia.com/wiki/War_of_the_Five_Kings?diff=327695&oldid=327606
+0.050372  http://gameofthrones.wikia.com/wiki/Joffrey_Baratheon
+0.048386  http://gameofthrones.wikia.com/wiki/War_of_the_Five_Kings
+0.027107  http://gameofthrones.wikia.com/wiki/Sansa_Stark
+0.018168  http://gameofthrones.wikia.com/wiki/Small_Council
+0.016941  http://gameofthrones.wikia.com/wiki/Podrick_Payne
+
+
