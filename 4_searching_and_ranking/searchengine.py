@@ -151,8 +151,10 @@ class searcher:
     # weights = []
     # weights = [(1.0, self.frequencyscore(rows))]
     # weights = [(1.0, self.locationscore(rows))]
+    # weights = [(1.0, self.distancescore(rows))]
     weights = [(1.0, self.frequencyscore(rows)),
-               (1.5, self.locationscore(rows))]
+               (1.5, self.locationscore(rows)),
+               (2.0, self.distancescore(rows))]
 
     for (weight,scores) in weights:
       for url in totalscores:
@@ -206,6 +208,13 @@ class searcher:
     rows = [row for row in cur]
 
     # rows contains a list of URL IDs, followed by the locations of all the different search terms
+    # E.g. when searching for 'tyrion lannister', the results may look like:
+    # (
+    #  [(298, 1938, 2671), (298, 1938, 2674), (298, 1938, 2926), (300, 2304, 1928), (300, 2304, 1930)],
+    #  [678, 675]
+    # )
+    # [678, 675] - 678 and 675 are the ids of the words being search for i.e. 678 = tyrion and 675 = lannister
+    # (298, 1938, 2671) - 298 is the urlid, 1938 is the wordlocation of wordid 678 and 2671 is the wordlocation of wordid 675
 
     return rows, wordids #returns a tuple i.e. (rows, wordids).
 
@@ -225,6 +234,20 @@ class searcher:
       if loc < locations[row[0]]: locations[row[0]]=loc
 
     return self.normalizescores(locations, smallIsBetter = 1)
+
+  ## Word Distance
+  # Works best when combined with other metrics
+  def distancescore(self, rows):
+    # If there's only one word, everyone wins!
+    if len(rows[0]) <= 2: return dict([(row[0],1.0) for row in rows])
+
+    # Initialize the dictionary with large values
+    mindistance = dict([(row[0], 1000000) for row in rows])
+
+    for row in rows:
+      dist = sum([abs(row[i] - row[i-1]) for i in range(2, len(row))])
+      if dist < mindistance[row[0]]: mindistance[row[0]] = dist
+    return self.normalizescores(mindistance, smallIsBetter = 1)
 
   def normalizescores(self, scores, smallIsBetter = 0):
     vsmall = 0.00001 # Avoid division by zero errors

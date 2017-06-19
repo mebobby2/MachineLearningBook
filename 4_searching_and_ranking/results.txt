@@ -56,4 +56,27 @@ e.query('tyrion lannister')
 0.018168  http://gameofthrones.wikia.com/wiki/Small_Council
 0.016941  http://gameofthrones.wikia.com/wiki/Podrick_Payne
 
+5. Content-Based Ranking, Word Distance
 
+1.000000  http://gameofthrones.wikia.com/wiki/The_Wall
+1.000000  http://gameofthrones.wikia.com/wiki/House_Moore
+1.000000  http://gameofthrones.wikia.com/wiki/Iron_Bank_of_Braavos
+1.000000  http://gameofthrones.wikia.com/wiki/Second_Siege_of_Meereen
+1.000000  http://gameofthrones.wikia.com/wiki/Oldtown
+1.000000  http://gameofthrones.wikia.com/wiki/Portal:_Free_Cities
+1.000000  http://gameofthrones.wikia.com/wiki/Conflict_Beyond_the_Wall
+1.000000  http://gameofthrones.wikia.com/wiki/Greyjoy_Rebellion
+1.000000  http://gameofthrones.wikia.com/wiki/Podrick_Payne
+1.000000  http://gameofthrones.wikia.com/wiki/Alliser_Thorne?diff=327681&oldid=326543
+
+6. Content-Based Ranking, Document Location (weight=1.5) + Word Frequency (weight=1) + Word Distance (weight=2)
+4.500000  http://gameofthrones.wikia.com/wiki/Tyrion_Lannister
+2.100356  http://gameofthrones.wikia.com/wiki/Cersei_Lannister
+2.099821  http://gameofthrones.wikia.com/wiki/Jaime_Lannister
+2.082276  http://gameofthrones.wikia.com/wiki/House_Lannister
+2.062945  http://gameofthrones.wikia.com/wiki/War_of_the_Five_Kings?diff=327695&oldid=327606
+2.050372  http://gameofthrones.wikia.com/wiki/Joffrey_Baratheon
+2.048386  http://gameofthrones.wikia.com/wiki/War_of_the_Five_Kings
+2.027107  http://gameofthrones.wikia.com/wiki/Sansa_Stark
+2.018168  http://gameofthrones.wikia.com/wiki/Small_Council
+2.016941  http://gameofthrones.wikia.com/wiki/Podrick_Payne
