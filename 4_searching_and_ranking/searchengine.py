@@ -194,10 +194,10 @@ class searcher:
     # weights = [(1.0, self.locationscore(rows))]
     # weights = [(1.0, self.distancescore(rows))]
     # weights = [(1.0, self.inboundlinkscore(rows))]
+    # weights = [(1.0, self.pagerankscore(rows))]
     weights = [(1.0, self.frequencyscore(rows)),
-               (1.5, self.locationscore(rows)),
-               (1.2, self.distancescore(rows)),
-               (1.0, self.inboundlinkscore(rows))]
+               (1.0, self.locationscore(rows)),
+               (1.0, self.pagerankscore(rows))]
 
     for (weight,scores) in weights:
       for url in totalscores:
@@ -298,6 +298,13 @@ class searcher:
     uniqueurls = set([row[0] for row in rows])
     inboundcount=dict([(u,self.con.execute('select count(*) from link where toid=%d' % u).fetchone()[0]) for u in uniqueurls])
     return self.normalizescores(inboundcount)
+
+  ## PageRank
+  def pagerankscore(self, rows):
+    pageranks = dict([(row[0], self.con.execute('select score from pagerank where urlid=%d' % row[0]).fetchone()[0]) for row in rows])
+    maxrank = max(pageranks.values())
+    normalizedscores = dict([(u, float(l)/maxrank) for (u,l) in pageranks.items()])
+    return normalizedscores
 
   def normalizescores(self, scores, smallIsBetter = 0):
     vsmall = 0.00001 # Avoid division by zero errors

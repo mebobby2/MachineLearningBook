@@ -116,3 +116,30 @@ you need to use in combination with the other metrics.
 2.112784  http://gameofthrones.wikia.com/wiki/Sansa_Stark
 2.112188  http://gameofthrones.wikia.com/wiki/Daenerys_Targaryen
 
+8. PageRank
+
+1.000000  http://gameofthrones.wikia.com/wiki/Game_of_Thrones_Wiki
+0.839531  http://gameofthrones.wikia.com/d/f
+0.839080  http://gameofthrones.wikia.com/wiki/War_of_the_Five_Kings
+0.839007  http://gameofthrones.wikia.com/wiki/Tyrion_Lannister
+0.838920  http://gameofthrones.wikia.com/wiki/Sansa_Stark
+0.838916  http://gameofthrones.wikia.com/wiki/Arya_Stark
+0.838902  http://gameofthrones.wikia.com/wiki/Cersei_Lannister
+0.838898  http://gameofthrones.wikia.com/wiki/Daenerys_Targaryen
+0.838891  http://gameofthrones.wikia.com/wiki/Season_6
+0.838883  http://gameofthrones.wikia.com/wiki/House_Stark
+
+10. Word Frequency (weight=1) + Document Location (weight=1) + PageRank (weight=1)
+
+2.839007  http://gameofthrones.wikia.com/wiki/Tyrion_Lannister
+1.001542  http://gameofthrones.wikia.com/wiki/Game_of_Thrones_Wiki
+0.937995  http://gameofthrones.wikia.com/wiki/Cersei_Lannister
+0.937404  http://gameofthrones.wikia.com/wiki/Jaime_Lannister
+0.919865  http://gameofthrones.wikia.com/wiki/House_Lannister
+0.888588  http://gameofthrones.wikia.com/wiki/Joffrey_Baratheon
+0.886820  http://gameofthrones.wikia.com/wiki/War_of_the_Five_Kings
+0.864958  http://gameofthrones.wikia.com/wiki/Sansa_Stark
+0.856025  http://gameofthrones.wikia.com/wiki/Small_Council
+0.854287  http://gameofthrones.wikia.com/wiki/Podrick_Payne
+
+PageRank is a useful metric for returning higher-level, more general pages
