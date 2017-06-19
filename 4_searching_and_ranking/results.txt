@@ -166,3 +166,14 @@ PageRank is a useful metric for returning higher-level, more general pages
 0.864958  http://gameofthrones.wikia.com/wiki/Sansa_Stark
 0.856025  http://gameofthrones.wikia.com/wiki/Small_Council
 0.854287  http://gameofthrones.wikia.com/wiki/Podrick_Payne
+
+The algorithm loops through all the search words, tyrion and lannister,
+looking for links that contain these words, and adding page rank scores
+of their from pages to the results.
+E.g. The word lannister is in the link http://gameofthrones.wikia.com/wiki/Jaime_Lannister.
+The algorithm will add the page rank score of the page that links to http://gameofthrones.wikia.com/wiki/Jaime_Lannister
+to http://gameofthrones.wikia.com/wiki/Jaime_Lannister. Therefore, the result
+http://gameofthrones.wikia.com/wiki/Jaime_Lannister is higher than the link
+http://gameofthrones.wikia.com/wiki/Game_of_Thrones_Wiki from run 10 since
+http://gameofthrones.wikia.com/wiki/Game_of_Thrones_Wiki does not contain any words
+used for querying, namely 'tyrion' and 'lannister'.
