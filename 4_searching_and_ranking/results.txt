@@ -6,16 +6,16 @@ e.query('tyrion lannister')
 
 1. No ranking, i.e. webpages are returned in the order they are crawled
 
-0.000000  http://gameofthrones.wikia.com/wiki/The_Wall
-0.000000  http://gameofthrones.wikia.com/wiki/House_Moore
-0.000000  http://gameofthrones.wikia.com/wiki/Iron_Bank_of_Braavos
-0.000000  http://gameofthrones.wikia.com/wiki/Second_Siege_of_Meereen
-0.000000  http://gameofthrones.wikia.com/wiki/Oldtown
-0.000000  http://gameofthrones.wikia.com/wiki/Portal:_Free_Cities
-0.000000  http://gameofthrones.wikia.com/wiki/Conflict_Beyond_the_Wall
-0.000000  http://gameofthrones.wikia.com/wiki/Greyjoy_Rebellion
-0.000000  http://gameofthrones.wikia.com/wiki/Podrick_Payne
-0.000000  http://gameofthrones.wikia.com/wiki/Alliser_Thorne?diff=327681&oldid=326543
+0.000000  http://da.gameofthrones.wikia.com/wiki/Forside
+0.000000  http://gameofthrones.wikia.com/wiki/Wylla?diff=327839&oldid=327822
+0.000000  http://gameofthrones.wikia.com/wiki/Winterfell_shepherd?diff=327841&oldid=327840
+0.000000  http://gameofthrones.wikia.com/wiki/The_Prince_of_Winterfell?diff=327843&oldid=327282
+0.000000  http://gameofthrones.wikia.com/wiki/The_Prince_of_Winterfell
+0.000000  http://gameofthrones.wikia.com/wiki/Aegon_V_Targaryen?diff=327844&oldid=326676
+0.000000  http://gameofthrones.wikia.com/wiki/User:Xanderen?diff=327847&oldid=327835
+0.000000  http://gameofthrones.wikia.com/wiki/User:Xanderen
+0.000000  http://gameofthrones.wikia.com/wiki/Paul_Ward
+0.000000  http://gameofthrones.wikia.com/wiki/Greyjoy_Rebellion?diff=327851&oldid=327850
 
 2. Content-Based Ranking, Word Frequency
 
@@ -23,12 +23,12 @@ e.query('tyrion lannister')
 0.096569  http://gameofthrones.wikia.com/wiki/Cersei_Lannister
 0.095973  http://gameofthrones.wikia.com/wiki/Jaime_Lannister
 0.078414  http://gameofthrones.wikia.com/wiki/House_Lannister
-0.061595  http://gameofthrones.wikia.com/wiki/War_of_the_Five_Kings?diff=327695&oldid=327606
 0.048445  http://gameofthrones.wikia.com/wiki/Joffrey_Baratheon
 0.046449  http://gameofthrones.wikia.com/wiki/War_of_the_Five_Kings
 0.023901  http://gameofthrones.wikia.com/wiki/Sansa_Stark
 0.016224  http://gameofthrones.wikia.com/wiki/Small_Council
 0.013713  http://gameofthrones.wikia.com/wiki/Podrick_Payne
+0.010043  http://gameofthrones.wikia.com/wiki/No_One
 
 3. Content-Based Ranking, Document Location
 
@@ -36,7 +36,7 @@ e.query('tyrion lannister')
 0.002575  http://gameofthrones.wikia.com/wiki/House_Lannister
 0.002565  http://gameofthrones.wikia.com/wiki/Jaime_Lannister
 0.002525  http://gameofthrones.wikia.com/wiki/Cersei_Lannister
-0.002166  http://gameofthrones.wikia.com/wiki/Lannisport
+0.002168  http://gameofthrones.wikia.com/wiki/Lannisport
 0.002159  http://gameofthrones.wikia.com/wiki/Reyne_Rebellion
 0.002152  http://gameofthrones.wikia.com/wiki/Podrick_Payne
 0.002142  http://gameofthrones.wikia.com/wiki/King%27s_Landing
@@ -49,25 +49,25 @@ e.query('tyrion lannister')
 0.100356  http://gameofthrones.wikia.com/wiki/Cersei_Lannister
 0.099821  http://gameofthrones.wikia.com/wiki/Jaime_Lannister
 0.082276  http://gameofthrones.wikia.com/wiki/House_Lannister
-0.062945  http://gameofthrones.wikia.com/wiki/War_of_the_Five_Kings?diff=327695&oldid=327606
 0.050372  http://gameofthrones.wikia.com/wiki/Joffrey_Baratheon
-0.048386  http://gameofthrones.wikia.com/wiki/War_of_the_Five_Kings
+0.048385  http://gameofthrones.wikia.com/wiki/War_of_the_Five_Kings
 0.027107  http://gameofthrones.wikia.com/wiki/Sansa_Stark
 0.018168  http://gameofthrones.wikia.com/wiki/Small_Council
 0.016941  http://gameofthrones.wikia.com/wiki/Podrick_Payne
+0.011986  http://gameofthrones.wikia.com/wiki/No_One
 
 5. Content-Based Ranking, Word Distance
 
-1.000000  http://gameofthrones.wikia.com/wiki/The_Wall
-1.000000  http://gameofthrones.wikia.com/wiki/House_Moore
-1.000000  http://gameofthrones.wikia.com/wiki/Iron_Bank_of_Braavos
-1.000000  http://gameofthrones.wikia.com/wiki/Second_Siege_of_Meereen
-1.000000  http://gameofthrones.wikia.com/wiki/Oldtown
-1.000000  http://gameofthrones.wikia.com/wiki/Portal:_Free_Cities
-1.000000  http://gameofthrones.wikia.com/wiki/Conflict_Beyond_the_Wall
-1.000000  http://gameofthrones.wikia.com/wiki/Greyjoy_Rebellion
-1.000000  http://gameofthrones.wikia.com/wiki/Podrick_Payne
-1.000000  http://gameofthrones.wikia.com/wiki/Alliser_Thorne?diff=327681&oldid=326543
+1.000000  http://da.gameofthrones.wikia.com/wiki/Forside
+1.000000  http://gameofthrones.wikia.com/wiki/Wylla?diff=327839&oldid=327822
+1.000000  http://gameofthrones.wikia.com/wiki/Winterfell_shepherd?diff=327841&oldid=327840
+1.000000  http://gameofthrones.wikia.com/wiki/The_Prince_of_Winterfell?diff=327843&oldid=327282
+1.000000  http://gameofthrones.wikia.com/wiki/The_Prince_of_Winterfell
+1.000000  http://gameofthrones.wikia.com/wiki/Aegon_V_Targaryen?diff=327844&oldid=326676
+1.000000  http://gameofthrones.wikia.com/wiki/User:Xanderen?diff=327847&oldid=327835
+1.000000  http://gameofthrones.wikia.com/wiki/User:Xanderen
+1.000000  http://gameofthrones.wikia.com/wiki/Paul_Ward
+1.000000  http://gameofthrones.wikia.com/wiki/Greyjoy_Rebellion?diff=327851&oldid=327850
 
 6. Content-Based Ranking, Document Location (weight=1.5) + Word Frequency (weight=1) + Word Distance (weight=2)
 
@@ -75,12 +75,23 @@ e.query('tyrion lannister')
 2.100356  http://gameofthrones.wikia.com/wiki/Cersei_Lannister
 2.099821  http://gameofthrones.wikia.com/wiki/Jaime_Lannister
 2.082276  http://gameofthrones.wikia.com/wiki/House_Lannister
-2.062945  http://gameofthrones.wikia.com/wiki/War_of_the_Five_Kings?diff=327695&oldid=327606
 2.050372  http://gameofthrones.wikia.com/wiki/Joffrey_Baratheon
-2.048386  http://gameofthrones.wikia.com/wiki/War_of_the_Five_Kings
+2.048385  http://gameofthrones.wikia.com/wiki/War_of_the_Five_Kings
 2.027107  http://gameofthrones.wikia.com/wiki/Sansa_Stark
 2.018168  http://gameofthrones.wikia.com/wiki/Small_Council
 2.016941  http://gameofthrones.wikia.com/wiki/Podrick_Payne
+2.011986  http://gameofthrones.wikia.com/wiki/No_One
 
 7. Inbound clicks, Simple
+
+1.000000  http://gameofthrones.wikia.com/wiki/Dance_of_the_Dragons
+0.990802  http://gameofthrones.wikia.com/wiki/Tyrion_Lannister
+0.957950  http://gameofthrones.wikia.com/wiki/Tales_of_Dunk_and_Egg
+0.930355  http://gameofthrones.wikia.com/wiki/Cersei_Lannister
+0.917214  http://gameofthrones.wikia.com/wiki/King%27s_Landing
+0.914586  http://gameofthrones.wikia.com/wiki/House_Stark
+0.904074  http://gameofthrones.wikia.com/wiki/Daenerys_Targaryen
+0.897503  http://gameofthrones.wikia.com/wiki/Jaime_Lannister
+0.896189  http://gameofthrones.wikia.com/wiki/House_Lannister
+0.885677  http://gameofthrones.wikia.com/wiki/Sansa_Stark
 
