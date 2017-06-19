@@ -84,7 +84,16 @@ class crawler:
 
   # Add a link between two pages
   def addlinkref(self, urlFrom, urlTo, linkText):
-    pass
+    words = self.separatewords(linkText)
+    fromid = self.getentryid('urllist', 'url', urlFrom)
+    toid = self.getentryid('urllist', 'url', urlTo)
+    if fromid == toid: return
+    cur = self.con.execute("insert into link(fromid,toid) values (%d,%d)" % (fromid,toid))
+    linkid = cur.lastrowid
+    for word in words:
+      if word in ignorewords: continue
+      wordid = self.getentryid('wordlist','word', word)
+      self.con.execute("insert into linkwords(linkid,wordid) values (%d,%d)" % (linkid,wordid))
 
   # Starting with a list of pages, do a breadth first search to the given depth, indexing pages
   # as we go
