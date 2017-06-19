@@ -1,4 +1,4 @@
-Searching for 'jon snow'
+Searching for 'tyrion lannister'
 
 import searchengine
 e = searchengine.searcher('searchindex.db')
@@ -17,6 +17,7 @@ e.query('tyrion lannister')
 0.000000  http://gameofthrones.wikia.com/wiki/Paul_Ward
 0.000000  http://gameofthrones.wikia.com/wiki/Greyjoy_Rebellion?diff=327851&oldid=327850
 
+
 2. Content-Based Ranking, Word Frequency
 
 1.000000  http://gameofthrones.wikia.com/wiki/Tyrion_Lannister
@@ -29,6 +30,7 @@ e.query('tyrion lannister')
 0.016224  http://gameofthrones.wikia.com/wiki/Small_Council
 0.013713  http://gameofthrones.wikia.com/wiki/Podrick_Payne
 0.010043  http://gameofthrones.wikia.com/wiki/No_One
+
 
 3. Content-Based Ranking, Document Location
 
@@ -43,6 +45,7 @@ e.query('tyrion lannister')
 0.002138  http://gameofthrones.wikia.com/wiki/Sansa_Stark
 0.002133  http://gameofthrones.wikia.com/wiki/Qyburn
 
+
 4. Content-Based Ranking, Document Location (weight=1.5) + Word Frequency (weight=1)
 
 2.500000  http://gameofthrones.wikia.com/wiki/Tyrion_Lannister
@@ -55,6 +58,7 @@ e.query('tyrion lannister')
 0.018168  http://gameofthrones.wikia.com/wiki/Small_Council
 0.016941  http://gameofthrones.wikia.com/wiki/Podrick_Payne
 0.011986  http://gameofthrones.wikia.com/wiki/No_One
+
 
 5. Content-Based Ranking, Word Distance
 
@@ -71,6 +75,7 @@ e.query('tyrion lannister')
 
 As can be seen, Word Distance works best when used in combination with some of the other metrics.
 
+
 6. Content-Based Ranking, Document Location (weight=1.5) + Word Frequency (weight=1) + Word Distance (weight=2)
 
 4.500000  http://gameofthrones.wikia.com/wiki/Tyrion_Lannister
@@ -83,6 +88,7 @@ As can be seen, Word Distance works best when used in combination with some of t
 2.018168  http://gameofthrones.wikia.com/wiki/Small_Council
 2.016941  http://gameofthrones.wikia.com/wiki/Podrick_Payne
 2.011986  http://gameofthrones.wikia.com/wiki/No_One
+
 
 7. Inbound clicks, Simple
 
@@ -103,6 +109,7 @@ have more inbound clicks than "Tyrion_Lannister", but you would rather see "Tyri
 first in the results if that's what you searched for. To combine relevance with ranking,
 you need to use in combination with the other metrics.
 
+
 8. Document Location (weight=1.5) + Word Frequency (weight=1) + Word Distance (weight=1.2) + Inbound clicks (weight=1)
 
 4.690802  http://gameofthrones.wikia.com/wiki/Tyrion_Lannister
@@ -116,7 +123,8 @@ you need to use in combination with the other metrics.
 2.112784  http://gameofthrones.wikia.com/wiki/Sansa_Stark
 2.112188  http://gameofthrones.wikia.com/wiki/Daenerys_Targaryen
 
-8. PageRank
+
+9. PageRank
 
 1.000000  http://gameofthrones.wikia.com/wiki/Game_of_Thrones_Wiki
 0.839531  http://gameofthrones.wikia.com/d/f
@@ -128,6 +136,7 @@ you need to use in combination with the other metrics.
 0.838898  http://gameofthrones.wikia.com/wiki/Daenerys_Targaryen
 0.838891  http://gameofthrones.wikia.com/wiki/Season_6
 0.838883  http://gameofthrones.wikia.com/wiki/House_Stark
+
 
 10. Word Frequency (weight=1) + Document Location (weight=1) + PageRank (weight=1)
 
@@ -143,3 +152,17 @@ you need to use in combination with the other metrics.
 0.854287  http://gameofthrones.wikia.com/wiki/Podrick_Payne
 
 PageRank is a useful metric for returning higher-level, more general pages
+
+
+11. Word Frequency (weight=1) + Document Location (weight=1) + PageRank (weight=1) + Link Text (weight=1)
+
+3.839007  http://gameofthrones.wikia.com/wiki/Tyrion_Lannister
+1.382600  http://gameofthrones.wikia.com/wiki/Jaime_Lannister
+1.374548  http://gameofthrones.wikia.com/wiki/Cersei_Lannister
+1.352688  http://gameofthrones.wikia.com/wiki/House_Lannister
+1.001542  http://gameofthrones.wikia.com/wiki/Game_of_Thrones_Wiki
+0.888588  http://gameofthrones.wikia.com/wiki/Joffrey_Baratheon
+0.886820  http://gameofthrones.wikia.com/wiki/War_of_the_Five_Kings
+0.864958  http://gameofthrones.wikia.com/wiki/Sansa_Stark
+0.856025  http://gameofthrones.wikia.com/wiki/Small_Council
+0.854287  http://gameofthrones.wikia.com/wiki/Podrick_Payne

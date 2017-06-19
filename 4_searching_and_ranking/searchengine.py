@@ -197,7 +197,7 @@ class searcher:
     # weights = [(1.0, self.pagerankscore(rows))]
     weights = [(1.0, self.frequencyscore(rows)),
                (1.0, self.locationscore(rows)),
-               (1.0, self.pagerankscore(rows)).
+               (1.0, self.pagerankscore(rows)),
                (1.0, self.linktextscore(rows, wordids))]
 
     for (weight,scores) in weights:
