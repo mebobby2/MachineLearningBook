@@ -167,6 +167,16 @@ class searcher:
     for (score, urlid) in rankedscores[0:10]:
       print '%f\t%s' % (score, self.geturlname(urlid))
 
+  def normalizescores(self, scores, smallIsBetter = 0):
+    vsmall = 0.00001 # Avoid division by zero errors
+    if smallIsBetter:
+      minscore = min(scores.values())
+      return dict([(u, float(minscore)/max(vsmall, l)) for (u,l) in scores.items()])
+    else:
+      maxscore = max(scores.values())
+      if maxscore == 0: maxscore = vsmall
+      return dict([(u, float(c)/maxscore) for (u,c) in scores.items()])
+
   def getmatchrows(self,q):
     # Strings to build the query
     fieldlist = 'w0.urlid'
