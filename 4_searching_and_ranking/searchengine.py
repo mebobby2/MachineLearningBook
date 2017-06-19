@@ -246,7 +246,6 @@ class searcher:
     return self.normalizescores(locations, smallIsBetter = 1)
 
   ## Word Distance
-  # Works best when combined with other metrics
   def distancescore(self, rows):
     # If there's only one word, everyone wins!
     if len(rows[0]) <= 2: return dict([(row[0],1.0) for row in rows])

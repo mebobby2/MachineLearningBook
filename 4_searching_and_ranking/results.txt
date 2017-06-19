@@ -69,6 +69,8 @@ e.query('tyrion lannister')
 1.000000  http://gameofthrones.wikia.com/wiki/Paul_Ward
 1.000000  http://gameofthrones.wikia.com/wiki/Greyjoy_Rebellion?diff=327851&oldid=327850
 
+As can be seen, Word Distance works best when used in combination with some of the other metrics.
+
 6. Content-Based Ranking, Document Location (weight=1.5) + Word Frequency (weight=1) + Word Distance (weight=2)
 
 4.500000  http://gameofthrones.wikia.com/wiki/Tyrion_Lannister
@@ -94,4 +96,10 @@ e.query('tyrion lannister')
 0.897503  http://gameofthrones.wikia.com/wiki/Jaime_Lannister
 0.896189  http://gameofthrones.wikia.com/wiki/House_Lannister
 0.885677  http://gameofthrones.wikia.com/wiki/Sansa_Stark
+
+Using this metric by itself will simply return all the pages containing the search terms,
+ranked solely on how many inbound links they have. In the dataset, "Dance_of_the_Dragons"
+have more inbound clicks than "Tyrion_Lannister", but you would rather see "Tyrion_Lannister"
+first in the results if that's what you searched for. To combine relevance with ranking,
+you need to use in combination with the other metrics.
 

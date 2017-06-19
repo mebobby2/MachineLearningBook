@@ -115,5 +115,5 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 92
-Obviously, using this metric by itself will simply return all the pages containing
+Upto page 93
+The PageRank Algorithm
