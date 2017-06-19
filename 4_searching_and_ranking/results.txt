@@ -70,6 +70,7 @@ e.query('tyrion lannister')
 1.000000  http://gameofthrones.wikia.com/wiki/Alliser_Thorne?diff=327681&oldid=326543
 
 6. Content-Based Ranking, Document Location (weight=1.5) + Word Frequency (weight=1) + Word Distance (weight=2)
+
 4.500000  http://gameofthrones.wikia.com/wiki/Tyrion_Lannister
 2.100356  http://gameofthrones.wikia.com/wiki/Cersei_Lannister
 2.099821  http://gameofthrones.wikia.com/wiki/Jaime_Lannister
@@ -80,3 +81,6 @@ e.query('tyrion lannister')
 2.027107  http://gameofthrones.wikia.com/wiki/Sansa_Stark
 2.018168  http://gameofthrones.wikia.com/wiki/Small_Council
 2.016941  http://gameofthrones.wikia.com/wiki/Podrick_Payne
+
+7. Inbound clicks, Simple
+
