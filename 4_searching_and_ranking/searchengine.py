@@ -143,6 +143,38 @@ class crawler:
     self.con.execute('create index urlfromidx on link(fromid)')
     self.dbcommit()
 
+  # import searchengine
+  # crawler=searchengine.crawler('searchindex.db')
+  # crawler.calculatepagerank()
+
+  # To test if it worked:
+  # cur=crawler.con.execute('select * from pagerank order by score desc')
+  # for i in range(3): print cur.next()
+  # e.geturlname(438)
+  def calculatepagerank(self, iterations = 20):
+    # clear out the current PageRank tables
+    self.con.execute('drop table if exists pagerank')
+    self.con.execute('create table pagerank(urlid primary key,score)')
+
+    #initialize every url with a PageRank of 1
+    self.con.execute('insert into pagerank select rowid, 1.0 from urllist')
+    self.dbcommit()
+
+    for i in range(iterations):
+      print "Iteration %d" % (i)
+      for (urlid,) in self.con.execute('select rowid from urllist'):
+        pr = 0.15
+
+        # Loop through all the pages that link to this one
+        for (linker,) in self.con.execute('select distinct fromid from link where toid=%d' % urlid):
+          # Get the PageRank of the linker
+          linkingpr = self.con.execute('select score from pagerank where urlid=%d' % linker).fetchone()[0]
+
+          # Get the total number of links from the linker
+          linkingcount = self.con.execute('select count(*) from link where fromid=%d' % linker).fetchone()[0]
+          pr += 0.85*(linkingpr/linkingcount)
+        self.con.execute('update pagerank set score = %f where urlid=%d' % (pr, urlid))
+      self.dbcommit()
 
 # Usage:
 # 1. import searchengine
