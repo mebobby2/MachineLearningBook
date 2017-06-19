@@ -115,5 +115,5 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 96
-Using the Link Text
+Upto page 97
+Learning from Clicks
