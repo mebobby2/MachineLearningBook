@@ -103,3 +103,16 @@ have more inbound clicks than "Tyrion_Lannister", but you would rather see "Tyri
 first in the results if that's what you searched for. To combine relevance with ranking,
 you need to use in combination with the other metrics.
 
+8. Document Location (weight=1.5) + Word Frequency (weight=1) + Word Distance (weight=1.2) + Inbound clicks (weight=1)
+
+4.690802  http://gameofthrones.wikia.com/wiki/Tyrion_Lannister
+2.230711  http://gameofthrones.wikia.com/wiki/Cersei_Lannister
+2.202120  http://gameofthrones.wikia.com/wiki/Dance_of_the_Dragons
+2.197325  http://gameofthrones.wikia.com/wiki/Jaime_Lannister
+2.178465  http://gameofthrones.wikia.com/wiki/House_Lannister
+2.160154  http://gameofthrones.wikia.com/wiki/Tales_of_Dunk_and_Egg
+2.121031  http://gameofthrones.wikia.com/wiki/King%27s_Landing
+2.118022  http://gameofthrones.wikia.com/wiki/House_Stark
+2.112784  http://gameofthrones.wikia.com/wiki/Sansa_Stark
+2.112188  http://gameofthrones.wikia.com/wiki/Daenerys_Targaryen
+

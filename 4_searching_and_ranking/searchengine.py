@@ -161,10 +161,11 @@ class searcher:
     # weights = [(1.0, self.frequencyscore(rows))]
     # weights = [(1.0, self.locationscore(rows))]
     # weights = [(1.0, self.distancescore(rows))]
-    weights = [(1.0, self.inboundlinkscore(rows))]
-    # weights = [(1.0, self.frequencyscore(rows)),
-    #            (1.5, self.locationscore(rows)),
-    #            (2.0, self.distancescore(rows))]
+    # weights = [(1.0, self.inboundlinkscore(rows))]
+    weights = [(1.0, self.frequencyscore(rows)),
+               (1.5, self.locationscore(rows)),
+               (1.2, self.distancescore(rows)),
+               (1.0, self.inboundlinkscore(rows))]
 
     for (weight,scores) in weights:
       for url in totalscores:
