@@ -149,7 +149,8 @@ class searcher:
 
     #This is where you'll later put the scoring functions
     # weights = []
-    weights = [(1.0, self.frequencyscore(rows))]
+    # weights = [(1.0, self.frequencyscore(rows))]
+    weights = [(1.0, self.locationscore(rows))]
 
     for (weight,scores) in weights:
       for url in totalscores:
@@ -202,7 +203,9 @@ class searcher:
     cur = self.con.execute(fullquery)
     rows = [row for row in cur]
 
-    return rows, wordids #returns a tuple i.e. (rows, wordids). rows contains a list of url ids
+    # rows contains a list of URL IDs, followed by the locations of all the different search terms
+
+    return rows, wordids #returns a tuple i.e. (rows, wordids).
 
   # Content-Based Ranking
 
@@ -211,6 +214,15 @@ class searcher:
     counts = dict([(row[0],0) for row in rows])
     for row in rows: counts[row[0]] += 1
     return self.normalizescores(counts)
+
+  ## Document Location
+  def locationscore(self, rows):
+    locations = dict([(row[0], 1000000) for row in rows])
+    for row in rows:
+      loc = sum(row[1:])
+      if loc < locations[row[0]]: locations[row[0]]=loc
+
+    return self.normalizescores(locations, smallIsBetter = 1)
 
   def normalizescores(self, scores, smallIsBetter = 0):
     vsmall = 0.00001 # Avoid division by zero errors

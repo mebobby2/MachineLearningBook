@@ -29,3 +29,16 @@ e.query('tyrion lannister')
 0.023901  http://gameofthrones.wikia.com/wiki/Sansa_Stark
 0.016224  http://gameofthrones.wikia.com/wiki/Small_Council
 0.013713  http://gameofthrones.wikia.com/wiki/Podrick_Payne
+
+3. Content-Based Ranking, Document Location
+
+1.000000  http://gameofthrones.wikia.com/wiki/Tyrion_Lannister
+0.002575  http://gameofthrones.wikia.com/wiki/House_Lannister
+0.002565  http://gameofthrones.wikia.com/wiki/Jaime_Lannister
+0.002525  http://gameofthrones.wikia.com/wiki/Cersei_Lannister
+0.002166  http://gameofthrones.wikia.com/wiki/Lannisport
+0.002159  http://gameofthrones.wikia.com/wiki/Reyne_Rebellion
+0.002152  http://gameofthrones.wikia.com/wiki/Podrick_Payne
+0.002142  http://gameofthrones.wikia.com/wiki/King%27s_Landing
+0.002138  http://gameofthrones.wikia.com/wiki/Sansa_Stark
+0.002133  http://gameofthrones.wikia.com/wiki/Qyburn
