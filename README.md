@@ -100,12 +100,14 @@ Used to find a two-dimensional representation of the dataset. Since most real-li
 
 The concept of imagining items in space depending on their parameters will be a recurring theme in this book. Using multidimensional scaling is an effective way to take a dataset and actually view it in a way that’s easy to interpret. It’s important to realize that some information is lost in the process of scaling, but the result should help you understand the algorithms better.
 
-### Content-Based Ranking
+### Content-Based Ranking for search results
 A score for a search item result is calculated based on 3 metrics:
 Word frequency - The number of times the words in the query appear in the document can help determine how relevant the document is.
 Document location - The main subject of a document will probably appear near the beginning of the document.
 Word distance - If there are multiple words in the query, they should appear close together in the document.
 
+### Inbound Links to rank search results
+Content-Based Ranking metrics have all been based on the content of the page. Although many search engines still work this way, the results can often be improved by considering information that others have provided about the page, specifically, who has linked to the page and what they have said about it. This is particularly useful when indexing pages of dubious value or pages that might have been created by spammers, as these are less likely to be linked than pages with real content.
 
 
 ## Source code for book
@@ -113,5 +115,5 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 87
-Content-Based Ranking
+Upto page 92
+Using Inbound Links
