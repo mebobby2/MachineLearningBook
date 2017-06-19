@@ -1,0 +1,31 @@
+Searching for 'john snow'
+
+import searchengine
+e = searchengine.searcher('searchindex.db')
+e.query('john snow')
+
+1. No ranking, i.e. webpages are returned in the order they are crawled
+
+0.000000  http://gameofthrones.wikia.com/wiki/Oathbreaker
+0.000000  http://watchersonthewall.com/game-thrones-stars-reportedly-salary-negotiations-final-seasons/
+0.000000  http://gameofthrones.wikia.com/wiki/Stephen_Dillane?diff=327683&oldid=301210
+0.000000  http://gameofthrones.wikia.com/wiki/Home
+0.000000  http://gameofthrones.wikia.com/wiki/Season_2
+0.000000  http://gameofthrones.wikia.com/wiki/Season_4
+0.000000  http://gameofthrones.wikia.com/wiki/Stephen_Dillane
+0.000000  http://gameofthrones.wikia.com/wiki/The_Sword_in_the_Darkness
+0.000000  http://gameofthrones.wikia.com/wiki/The_Red_Woman
+0.000000  http://watchersonthewall.com/season-seven-premiere-date-revealed/
+
+2. Content-Based Ranking, Word Frequency
+
+1.000000  http://gameofthrones.wikia.com/wiki/Blood_of_My_Blood
+0.958333  http://gameofthrones.wikia.com/wiki/Oathbreaker
+0.604167  http://gameofthrones.wikia.com/wiki/Samwell_Tarly
+0.458333  http://gameofthrones.wikia.com/wiki/Battle_of_the_Bastards_(episode)
+0.437500  http://watchersonthewall.com/game-thrones-stars-reportedly-salary-negotiations-final-seasons/
+0.375000  http://gameofthrones.wikia.com/wiki/Home
+0.312500  http://gameofthrones.wikia.com/wiki/The_Red_Woman
+0.291667  http://gameofthrones.wikia.com/wiki/Season_6
+0.250000  http://gameofthrones.wikia.com/wiki/Season_2
+0.166667  http://gameofthrones.wikia.com/wiki/Season_4
