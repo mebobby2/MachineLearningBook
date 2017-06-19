@@ -1,31 +1,31 @@
-Searching for 'john snow'
+Searching for 'jon snow'
 
 import searchengine
 e = searchengine.searcher('searchindex.db')
-e.query('john snow')
+e.query('tyrion lannister')
 
 1. No ranking, i.e. webpages are returned in the order they are crawled
 
-0.000000  http://gameofthrones.wikia.com/wiki/Oathbreaker
-0.000000  http://watchersonthewall.com/game-thrones-stars-reportedly-salary-negotiations-final-seasons/
-0.000000  http://gameofthrones.wikia.com/wiki/Stephen_Dillane?diff=327683&oldid=301210
-0.000000  http://gameofthrones.wikia.com/wiki/Home
-0.000000  http://gameofthrones.wikia.com/wiki/Season_2
-0.000000  http://gameofthrones.wikia.com/wiki/Season_4
-0.000000  http://gameofthrones.wikia.com/wiki/Stephen_Dillane
-0.000000  http://gameofthrones.wikia.com/wiki/The_Sword_in_the_Darkness
-0.000000  http://gameofthrones.wikia.com/wiki/The_Red_Woman
-0.000000  http://watchersonthewall.com/season-seven-premiere-date-revealed/
+0.000000  http://gameofthrones.wikia.com/wiki/The_Wall
+0.000000  http://gameofthrones.wikia.com/wiki/House_Moore
+0.000000  http://gameofthrones.wikia.com/wiki/Iron_Bank_of_Braavos
+0.000000  http://gameofthrones.wikia.com/wiki/Second_Siege_of_Meereen
+0.000000  http://gameofthrones.wikia.com/wiki/Oldtown
+0.000000  http://gameofthrones.wikia.com/wiki/Portal:_Free_Cities
+0.000000  http://gameofthrones.wikia.com/wiki/Conflict_Beyond_the_Wall
+0.000000  http://gameofthrones.wikia.com/wiki/Greyjoy_Rebellion
+0.000000  http://gameofthrones.wikia.com/wiki/Podrick_Payne
+0.000000  http://gameofthrones.wikia.com/wiki/Alliser_Thorne?diff=327681&oldid=326543
 
 2. Content-Based Ranking, Word Frequency
 
-1.000000  http://gameofthrones.wikia.com/wiki/Blood_of_My_Blood
-0.958333  http://gameofthrones.wikia.com/wiki/Oathbreaker
-0.604167  http://gameofthrones.wikia.com/wiki/Samwell_Tarly
-0.458333  http://gameofthrones.wikia.com/wiki/Battle_of_the_Bastards_(episode)
-0.437500  http://watchersonthewall.com/game-thrones-stars-reportedly-salary-negotiations-final-seasons/
-0.375000  http://gameofthrones.wikia.com/wiki/Home
-0.312500  http://gameofthrones.wikia.com/wiki/The_Red_Woman
-0.291667  http://gameofthrones.wikia.com/wiki/Season_6
-0.250000  http://gameofthrones.wikia.com/wiki/Season_2
-0.166667  http://gameofthrones.wikia.com/wiki/Season_4
+1.000000  http://gameofthrones.wikia.com/wiki/Tyrion_Lannister
+0.096569  http://gameofthrones.wikia.com/wiki/Cersei_Lannister
+0.095973  http://gameofthrones.wikia.com/wiki/Jaime_Lannister
+0.078414  http://gameofthrones.wikia.com/wiki/House_Lannister
+0.061595  http://gameofthrones.wikia.com/wiki/War_of_the_Five_Kings?diff=327695&oldid=327606
+0.048445  http://gameofthrones.wikia.com/wiki/Joffrey_Baratheon
+0.046449  http://gameofthrones.wikia.com/wiki/War_of_the_Five_Kings
+0.023901  http://gameofthrones.wikia.com/wiki/Sansa_Stark
+0.016224  http://gameofthrones.wikia.com/wiki/Small_Council
+0.013713  http://gameofthrones.wikia.com/wiki/Podrick_Payne
