@@ -10,14 +10,14 @@ import sqlite3 as sqlite
 # Testing:
 # 4. wordTyrion, wordLannister = 679, 676
 #      s.con.execute('select rowid from wordlist where word = \'lannister\'').fetchone()
-# 5. urlTyrionLannister, urlJaimeLannister = 78, 77
+# 5. urlTyrionLannister, urlJaimeLannister, urlCerseiLannister = 78, 77, 76
 #      s.con.execute('select rowid from urllist where url = \'http://gameofthrones.wikia.com/wiki/Jaime_Lannister\'').fetchone()
-# 6. net.generatehiddennode([wordTyrion, wordLannister], [urlTyrionLannister, urlJaimeLannister])
+# 6. net.generatehiddennode([wordTyrion, wordLannister], [urlTyrionLannister, urlJaimeLannister, urlCerseiLannister])
 #      hiddennode: 676_679
-#      wordhidden: 679, 1, 0.5 & 676, 1, 0.5
-#      hiddenurl: 1, 78, 0.1 & 1, 77, 0.1
-# 7. net.getresult([wordTyrion, wordLannister], [urlTyrionLannister, urlJaimeLannister])
-#      [0.07601250837541615, 0.07601250837541615] (no training yet)
+#      wordhidden: (679, 1, 0.5), (676, 1, 0.5)
+#      hiddenurl: (1, 78, 0.1), (1, 77, 0.1), (1, 76, 0.1)
+# 7. net.getresult([wordTyrion, wordLannister], [urlTyrionLannister, urlJaimeLannister, urlCerseiLannister])
+#      [0.07601250837541615, 0.07601250837541615, 0.07601250837541615] (no training yet)
 
 # Training:
 # 8. net.trainquery([wordTyrion,wordLannister],[urlTyrionLannister, urlJaimeLannister],urlTyrionLannister)
