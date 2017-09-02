@@ -20,7 +20,11 @@ import sqlite3 as sqlite
 #      [0.07601250837541615, 0.07601250837541615] (no training yet)
 
 # Training:
-# 8.
+# 8. net.trainquery([wordTyrion,wordLannister],[urlTyrionLannister, urlJaimeLannister],urlTyrionLannister)
+# 9. net.getresult([wordTyrion, wordLannister], [urlTyrionLannister, urlJaimeLannister])
+
+def dtanh(y):
+    return 1.0-y*y
 
 class searchnet:
     def __init__(self, dbname):
@@ -52,8 +56,7 @@ class searchnet:
             self.con.execute('insert into %s (fromid, toid, strength) values (%d, %d, %f)' % (table, fromid, toid, strength))
         else:
             rowid = res[0]
-            self.con.execute('update %s set strength = %f where rowid = %d' % (ta
-            , strength, rowid))
+            self.con.execute('update %s set strength = %f where rowid = %d' % (table , strength, rowid))
 
     def generatehiddennode(self, wordids, urls):
         if len(wordids) > 3: return None
@@ -125,3 +128,51 @@ class searchnet:
     def getresult(self, wordids, urlids):
         self.setupnetwork(wordids, urlids)
         return self.feedforward()
+
+    def backpropagate(self, targets, N = 0.5):
+        # calculate the errors for the output
+        output_deltas = [0.0] * len(self.urlids)
+        for k in range(len(self.urlids)):
+            error = targets[k] - self.ao[k]
+            output_deltas[k] = dtanh(self.ao[k]) * error
+
+        # calculate errors for hidden layer
+        hidden_deltas = [0.0] * len(self.hiddenids)
+        for j in range(len(self.hiddenids)):
+            error = 0.0
+            for k in range(len(self.urlids)):
+                error = error + output_deltas[k] * self.wo[j][k]
+            hidden_deltas[j] = dtanh(self.ah[j]) * error
+
+        # update output weights
+        for j in range(len(self.hiddenids)):
+            for k in range(len(self.urlids)):
+                change = output_deltas[k]*self.ah[j]
+                self.wo[j][k] = self.wo[j][k] + N*change
+
+        # update input weights
+        for i in range(len(self.wordids)):
+            for j in range(len(self.hiddenids)):
+                change = hidden_deltas[j]*self.ai[i]
+                self.wi[i][j] = self.wi[i][j] + N*change
+
+    def trainquery(self, wordids, urlids, selectedurl):
+        # generate a hidden node if necessary
+        self.generatehiddennode(wordids, urlids)
+
+        self.setupnetwork(wordids, urlids)
+        self.feedforward()
+        targets = [0.0] * len(urlids)
+        targets[urlids.index(selectedurl)] = 1.0
+        error = self.backpropagate(targets)
+        self.updatedatabase()
+
+    def updatedatabase(self):
+        # set them to database values
+        for i in range(len(self.wordids)):
+            for j in range(len(self.hiddenids)):
+                self.setstrength(self.wordids[i], self.hiddenids[j], 0, self.wi[i][j])
+        for j in range(len(self.hiddenids)):
+            for k in range(len(self.urlids)):
+                self.setstrength(self.hiddenids[j], self.urlids[k], 1, self.wo[j][k])
+        self.con.commit()

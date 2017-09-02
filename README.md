@@ -115,6 +115,8 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 103
+Upto page 106
 
-Training with Backpropagation
+Training Test
+
+Before that: understand the code for the nn
