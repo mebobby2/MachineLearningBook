@@ -119,4 +119,4 @@ Upto page 106
 
 Training Test
 
-Before that: understand the code for the nn
+Before that: understand the code for the nn, upto backpropagate func
