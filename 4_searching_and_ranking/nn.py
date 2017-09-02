@@ -19,9 +19,10 @@ import sqlite3 as sqlite
 # 7. net.getresult([wordTyrion, wordLannister], [urlTyrionLannister, urlJaimeLannister, urlCerseiLannister])
 #      [0.07601250837541615, 0.07601250837541615, 0.07601250837541615] (no training yet)
 
-# Training: (Skip step 7)
+# Training: (Skip step 6)
 # 8. net.trainquery([wordTyrion,wordLannister],[urlTyrionLannister, urlJaimeLannister, urlCerseiLannister],urlTyrionLannister)
 # 9. net.getresult([wordTyrion, wordLannister], [urlTyrionLannister, urlJaimeLannister, urlCerseiLannister])
+#      [0.3350632467125332, 0.055127057492088, 0.055127057492088]
 
 def dtanh(y):
     return 1.0-y*y
