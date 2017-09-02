@@ -115,5 +115,6 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 97
-Learning from Clicks
+Upto page 103
+
+Training with Backpropagation
