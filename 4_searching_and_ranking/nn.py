@@ -20,8 +20,8 @@ import sqlite3 as sqlite
 #      [0.07601250837541615, 0.07601250837541615, 0.07601250837541615] (no training yet)
 
 # Training:
-# 8. net.trainquery([wordTyrion,wordLannister],[urlTyrionLannister, urlJaimeLannister],urlTyrionLannister)
-# 9. net.getresult([wordTyrion, wordLannister], [urlTyrionLannister, urlJaimeLannister])
+# 8. net.trainquery([wordTyrion,wordLannister],[urlTyrionLannister, urlJaimeLannister, urlCerseiLannister],urlTyrionLannister)
+# 9. net.getresult([wordTyrion, wordLannister], [urlTyrionLannister, urlJaimeLannister, urlCerseiLannister])
 
 def dtanh(y):
     return 1.0-y*y
