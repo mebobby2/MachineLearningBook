@@ -19,7 +19,7 @@ import sqlite3 as sqlite
 # 7. net.getresult([wordTyrion, wordLannister], [urlTyrionLannister, urlJaimeLannister, urlCerseiLannister])
 #      [0.07601250837541615, 0.07601250837541615, 0.07601250837541615] (no training yet)
 
-# Training:
+# Training: (Skip step 7)
 # 8. net.trainquery([wordTyrion,wordLannister],[urlTyrionLannister, urlJaimeLannister, urlCerseiLannister],urlTyrionLannister)
 # 9. net.getresult([wordTyrion, wordLannister], [urlTyrionLannister, urlJaimeLannister, urlCerseiLannister])
 
