@@ -93,38 +93,38 @@ class searchnet:
         self.urlids = urlids
 
         # node outputs
-        self.ai = [1.0]*len(self.wordids)
-        self.ah = [1.0]*len(self.hiddenids)
-        self.ao = [1.0]*len(self.urlids)
+        self.activation_input = [1.0]*len(self.wordids)
+        self.activation_hidden = [1.0]*len(self.hiddenids)
+        self.activation_output = [1.0]*len(self.urlids)
 
         # create weights matrix
-        self.wi = [[self.getstrength(wordid, hiddenid, 0)
+        self.weights_input = [[self.getstrength(wordid, hiddenid, 0)
                         for hiddenid in self.hiddenids]
                     for wordid in self.wordids]
-        self.wo = [[self.getstrength(hiddenid, urlid, 1)
+        self.weights_output = [[self.getstrength(hiddenid, urlid, 1)
                         for urlid in self.urlids]
                     for hiddenid in self.hiddenids]
 
     def feedforward(self):
         # the only inputs are the query words
         for i in range(len(self.wordids)):
-            self.ai[i] = 1.0
+            self.activation_input[i] = 1.0
 
         # hidden activations
         for j in range(len(self.hiddenids)):
             sum = 0.0
             for i in range(len(self.wordids)):
-                sum = sum + self.ai[i] * self.wi[i][j]
-            self.ah[j] = tanh(sum)
+                sum = sum + self.activation_input[i] * self.weights_input[i][j]
+            self.activation_hidden[j] = tanh(sum)
 
         # output activations
         for k in range(len(self.urlids)):
             sum = 0.0
             for j in range(len(self.hiddenids)):
-                sum = sum + self.ah[j] * self.wo[j][k]
-            self.ao[k] = tanh(sum)
+                sum = sum + self.activation_hidden[j] * self.weights_output[j][k]
+            self.activation_output[k] = tanh(sum)
 
-        return self.ao[:]
+        return self.activation_output[:]
 
     def getresult(self, wordids, urlids):
         self.setupnetwork(wordids, urlids)
@@ -134,28 +134,28 @@ class searchnet:
         # calculate the errors for the output
         output_deltas = [0.0] * len(self.urlids)
         for k in range(len(self.urlids)):
-            error = targets[k] - self.ao[k]
-            output_deltas[k] = dtanh(self.ao[k]) * error
+            error = targets[k] - self.activation_output[k]
+            output_deltas[k] = dtanh(self.activation_output[k]) * error
 
         # calculate errors for hidden layer
         hidden_deltas = [0.0] * len(self.hiddenids)
         for j in range(len(self.hiddenids)):
             error = 0.0
             for k in range(len(self.urlids)):
-                error = error + output_deltas[k] * self.wo[j][k]
-            hidden_deltas[j] = dtanh(self.ah[j]) * error
+                error = error + output_deltas[k] * self.weights_output[j][k]
+            hidden_deltas[j] = dtanh(self.activation_hidden[j]) * error
 
         # update output weights
         for j in range(len(self.hiddenids)):
             for k in range(len(self.urlids)):
-                change = output_deltas[k]*self.ah[j]
-                self.wo[j][k] = self.wo[j][k] + N*change
+                change = output_deltas[k]*self.activation_hidden[j]
+                self.weights_output[j][k] = self.weights_output[j][k] + N*change
 
         # update input weights
         for i in range(len(self.wordids)):
             for j in range(len(self.hiddenids)):
-                change = hidden_deltas[j]*self.ai[i]
-                self.wi[i][j] = self.wi[i][j] + N*change
+                change = hidden_deltas[j]*self.activation_input[i]
+                self.weights_input[i][j] = self.weights_input[i][j] + N*change
 
     def trainquery(self, wordids, urlids, selectedurl):
         # generate a hidden node if necessary
@@ -172,8 +172,8 @@ class searchnet:
         # set them to database values
         for i in range(len(self.wordids)):
             for j in range(len(self.hiddenids)):
-                self.setstrength(self.wordids[i], self.hiddenids[j], 0, self.wi[i][j])
+                self.setstrength(self.wordids[i], self.hiddenids[j], 0, self.weights_input[i][j])
         for j in range(len(self.hiddenids)):
             for k in range(len(self.urlids)):
-                self.setstrength(self.hiddenids[j], self.urlids[k], 1, self.wo[j][k])
+                self.setstrength(self.hiddenids[j], self.urlids[k], 1, self.weights_output[j][k])
         self.con.commit()
