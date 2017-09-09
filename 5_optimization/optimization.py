@@ -73,7 +73,7 @@ def schedulecost(sol):
     return totalprice + totalwait
 
 # 1. import optimization
-# 2. domain = [(0,8)]*(len(optimization.people)*2)
+# 2. domain = [(0,9)]*(len(optimization.people)*2)
 # 3. s = optimization.randomoptimize(domain, optimization.schedulecost)
 # 4. optimization.schedulecost(s)
 # 5. optimization.printschedule(s)
