@@ -115,6 +115,6 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 112
+Upto page 114
 
-The Cost Function
+Random Searching
