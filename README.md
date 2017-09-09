@@ -126,6 +126,8 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 114
+Upto page 118
 
-Random Searching
+Simulated Annealing
+
+Before that: understand the hillclimb function
