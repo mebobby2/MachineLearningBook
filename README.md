@@ -118,7 +118,7 @@ The cost function is the key to solving any problem using optimization, and itâ€
 
 ### Maths
 #### Number of combinations
-Let's say I have four values, A, B, C, and D. And TWO of these values make a valid tuple. How many times/loops do I need to make to find the valid tuple. The formula is P^I, where P = number of possibilities and I = the number of inputs. Hence, 2^4 = 16 loops.
+Let's say I have six values, A, B, C, D, E, F. And TWO of these values make a valid tuple. How many times/loops do I need to make to find the valid tuple. The formula is I^P, where P = number of possibilities and I = the number of inputs. Hence, 6^2 = 36 loops/combinations we need to look through.
 
 
 ## Source code for book
