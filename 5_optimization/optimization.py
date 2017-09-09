@@ -71,3 +71,24 @@ def schedulecost(sol):
     if latestarrival > earliestdep: totalprice += 50
 
     return totalprice + totalwait
+
+# 1. import optimization
+# 2. domain = [(0,8)]*(len(optimization.people)*2)
+# 3. s = optimization.randomoptimize(domain, optimization.schedulecost)
+# 4. optimization.schedulecost(s)
+# 5. optimization.printschedule(s)
+def randomoptimize(domain, costf):
+    best = 999999999
+    bestr = None
+    for i in range(1000):
+        # Create a random solution
+        r = [random.randint(domain[i][0], domain[i][1]) for i in range(len(domain))]
+
+        # Get the cost
+        cost = costf(r)
+
+        # Compare it to the best one so far
+        if cost < best:
+            best = cost
+            bestr = r
+    return bestr
