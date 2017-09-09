@@ -109,6 +109,17 @@ Word distance - If there are multiple words in the query, they should appear clo
 ### Inbound Links to rank search results
 Content-Based Ranking metrics have all been based on the content of the page. Although many search engines still work this way, the results can often be improved by considering information that others have provided about the page, specifically, who has linked to the page and what they have said about it. This is particularly useful when indexing pages of dubious value or pages that might have been created by spammers, as these are less likely to be linked than pages with real content.
 
+### Stochastic Optimization
+Optimization techniques are typically used in problems that have many possible solutions across many variables, and that have outcomes that can change greatly depending on the combinations of these variables.
+
+Optimization finds the best solution to a problem by trying many different solutions and scoring them to determine their quality. Optimization is typically used in cases where there are too many possible solutions to try them all.
+
+The cost function is the key to solving any problem using optimization, and it’s usu- ally the most difficult thing to determine.
+
+### Maths
+#### Number of combinations
+Let's say I have four values, A, B, C, and D. And TWO of these values make a valid tuple. How many times/loops do I need to make to find the valid tuple. The formula is P^I, where P = number of possibilities and I = the number of inputs. Hence, 2^4 = 16 loops.
+
 
 ## Source code for book
 https://github.com/arthur-e/Programming-Collective-Intelligence
