@@ -1,0 +1,121 @@
+For words 'tyrion lannister' and three output links with ids 78, 77, 76 and
+the link the user clicked on  is 78.
+
+-----------------------------------------------------------------
+Previous state:
+-----------------------------------------------------------------
+Input Layer Activations:
+  1.000000
+  1.000000
+Hidden Layer Activations
+  0.761594
+Output Layer Activations
+  0.076013
+  0.076013
+  0.076013
+Weights: Input -> Hidden
+*
+   0.500000
+*
+   0.500000
+Weights: Hidden -> Output
+*
+   0.100000
+   0.100000
+   0.100000
+-----------------------------------------------------------------
+targets:
+-----------------------------------------------------------------
+  1
+  0
+  0
+-----------------------------------------------------------------
+Calculate output delta:
+-----------------------------------------------------------------
+
+for each URL
+
+targets[k] - self.activation_output[k]
+1 -  0.076013 = 0.923987
+dtanh(self.activation_output[k]) * error
+0.994222 * 0.923987 = 0.918649
+
+targets[k] - self.activation_output[k]
+0 -  0.076013 = -0.076013
+dtanh(self.activation_output[k]) * error
+0.994222 * -0.076013 = -0.075573
+
+targets[k] - self.activation_output[k]
+0 -  0.076013 = -0.076013
+dtanh(self.activation_output[k]) * error
+0.994222 * -0.076013 = -0.075573
+
+Output deltas:
+  0.918649
+  -0.075573
+  -0.075573
+
+-----------------------------------------------------------------
+Calculate hidden delta:
+-----------------------------------------------------------------
+
+for each Hidden Node
+
+for each URL
+
+error + output_deltas[k] * self.weights_output[j][k]
+0.000000 + 0.918649 * 0.100000 = 0.091865
+
+error + output_deltas[k] * self.weights_output[j][k]
+0.091865 + -0.075573 * 0.100000 = 0.084308
+
+error + output_deltas[k] * self.weights_output[j][k]
+0.084308 + -0.075573 * 0.100000 = 0.076750
+
+dtanh(self.activation_hidden[j]) * error
+0.419974 * 0.076750 = 0.032233
+
+Hidden deltas:
+  0.032233
+-----------------------------------------------------------------
+Update hidden to output weights:
+-----------------------------------------------------------------
+
+for each HiddenId
+
+for each UrlId
+output_deltas[k]*self.activation_hidden[j]
+0.918649 * 0.761594 = 0.699638
+self.weights_output[j][k] + N * change
+0.100000 + 0.500000 * 0.699638 = 0.449819
+
+for each UrlId
+output_deltas[k]*self.activation_hidden[j]
+-0.075573 * 0.761594 = -0.057556
+self.weights_output[j][k] + N * change
+0.100000 + 0.500000 * -0.057556 = 0.071222
+
+for each UrlId
+output_deltas[k]*self.activation_hidden[j]
+-0.075573 * 0.761594 = -0.057556
+self.weights_output[j][k] + N * change
+0.100000 + 0.500000 * -0.057556 = 0.071222
+-----------------------------------------------------------------
+Update input to hidden weights:
+-----------------------------------------------------------------
+
+for each WordId
+
+for each HiddenId
+hidden_deltas[j]*self.activation_input[i]
+0.032233 * 1.000000 = 0.032233
+self.weights_input[i][j] + N*change
+0.500000 + 0.500000 * 0.032233 = 0.516117
+
+for WordId
+
+for HiddenId
+hidden_deltas[j]*self.activation_input[i]
+0.032233 * 1.000000 = 0.032233
+self.weights_input[i][j] + N*change
+0.500000 + 0.500000 * 0.032233 = 0.516117
