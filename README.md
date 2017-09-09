@@ -129,5 +129,3 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 Upto page 118
 
 Simulated Annealing
-
-Before that: understand the hillclimb function
