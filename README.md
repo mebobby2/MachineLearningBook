@@ -115,6 +115,6 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 109
+Upto page 112
 
-Chapter 5
+The Cost Function
