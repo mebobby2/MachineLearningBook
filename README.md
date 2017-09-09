@@ -115,8 +115,6 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 106
+Upto page 109
 
-Training Test
-
-Before that: understand the code for the nn, upto backpropagate func
+Chapter 5

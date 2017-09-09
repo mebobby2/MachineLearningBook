@@ -3,6 +3,8 @@ from bs4 import BeautifulSoup
 from urlparse import urljoin
 import sqlite3 as sqlite
 import re
+import nn
+mynet = nn.searchnet('nn.db')
 
 ignorewords = set(['the', 'of', 'to', 'and', 'a', 'in', 'is', 'it'])
 
@@ -198,7 +200,8 @@ class searcher:
     weights = [(1.0, self.frequencyscore(rows)),
                (1.0, self.locationscore(rows)),
                (1.0, self.pagerankscore(rows)),
-               (1.0, self.linktextscore(rows, wordids))]
+               (1.0, self.linktextscore(rows, wordids)),
+               (1.0, self.nnscore(rows, wordids))]
 
     for (weight,scores) in weights:
       for url in totalscores:
@@ -216,6 +219,7 @@ class searcher:
     rankedscores = sorted([(score, url) for (url,score) in scores.items()], reverse = 1)
     for (score, urlid) in rankedscores[0:10]:
       print '%f\t%s' % (score, self.geturlname(urlid))
+    return wordids, [r[1] for r in rankedscores[0:10]]
 
   def getmatchrows(self,q):
     # Strings to build the query
@@ -320,6 +324,14 @@ class searcher:
     normalizedscores = dict([(u, float(l)/maxscore) for (u,l) in linkscores.items()])
     return normalizedscores
 
+  ## Neural Network
+  def nnscore(self, rows, wordids):
+      # Get the unique URL IDs as an ordered list
+      urlids = [urlid for urlid in set([row[0] for row in rows])]
+      nnres = mynet.getresult(wordids, urlids)
+      scores = dict([(urlids[i], nnres[i]) for i in range(len(urlids))])
+      return self.normalizescores(scores)
+
 
   def normalizescores(self, scores, smallIsBetter = 0):
     vsmall = 0.00001 # Avoid division by zero errors
@@ -333,4 +345,3 @@ class searcher:
 
   def __del__(self):
     self.con.close()
-
