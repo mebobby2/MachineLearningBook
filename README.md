@@ -128,6 +128,6 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 127
+Upto page 129
 
-Finally, you’ll need a function that requests the results until there are no more.
+Optimizing for Preferences
