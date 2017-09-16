@@ -128,6 +128,6 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 129
+Upto page 132
 
-Optimizing for Preferences
+The Cost Function
