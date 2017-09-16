@@ -116,6 +116,8 @@ Optimization finds the best solution to a problem by trying many different solut
 
 The cost function is the key to solving any problem using optimization, and it’s usu- ally the most difficult thing to determine.
 
+Whether a particular optimization method will work depends very much on the problem. Simulated annealing, genetic optimization, and most other optimization methods rely on the fact that, in most problems, the best solution is close to other good solutions.
+
 ### Maths
 #### Number of combinations
 Let's say I have six values, A, B, C, D, E, F. And TWO of these values make a valid tuple. How many times/loops do I need to make to find the valid tuple. The formula is I^P, where P = number of possibilities and I = the number of inputs. Hence, 6^2 = 36 loops/combinations we need to look through.
@@ -126,6 +128,6 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 118
+Upto page 124
 
-Simulated Annealing
+Real Flight Searches
