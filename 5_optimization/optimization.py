@@ -161,14 +161,16 @@ def annealingoptimize(domain, costf, T = 10000.0, cool = 0.95, step = 1):
         T = T * cool
     return vec
 
+# s = optimization.geneticoptimize(domain, optimization.schedulecost)
+# Seems to constantly give the most optimal result
 def geneticoptimize(domain, costf, popsize = 50, step = 1, mutprod=0.2, elite=0.2, maxiter=100):
     # Mutation Operation
     def mutate(vec):
         i = random.randint(0, len(domain)-1)
-        if random.random() < 0.5 and vec[i] > domain[i][0]:
+        if random.random() < 0.5 and vec[i] >= domain[i][0]:
             return vec[0:i]+[vec[i]-step]+vec[i+1:]
-        elif vec[i] < domain[i][1]:
-            return vec[0:1]+[vec[i]+step]+vec[i+1:]
+        elif vec[i] <= domain[i][1]:
+            return vec[0:i]+[vec[i]+step]+vec[i+1:]
 
     # Crossover Operation
     def crossover(r1,r2):
