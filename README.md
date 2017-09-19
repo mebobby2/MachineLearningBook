@@ -130,6 +130,6 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 133
+Upto page 135
 
-Network Visualization
+Add crosscount to socialnetwork.py:
