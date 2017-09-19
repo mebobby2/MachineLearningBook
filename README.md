@@ -118,6 +118,8 @@ The cost function is the key to solving any problem using optimization, and itâ€
 
 Whether a particular optimization method will work depends very much on the problem. Simulated annealing, genetic optimization, and most other optimization methods rely on the fact that, in most problems, the best solution is close to other good solutions.
 
+A useful rule when creating a cost function is, if possible, to make the perfect solu- tion (which in this example is everyone being assigned to their top choice) have a cost of zero. In this case, youâ€™ve already determined that the perfect solution is impossible, but knowing that its cost is zero gives you an idea of how close you are to it. The other advantage of this rule is that you can tell an optimization algorithm to stop searching for better solutions if it ever finds a perfect solution.
+
 ### Maths
 #### Number of combinations
 Let's say I have six values, A, B, C, D, E, F. And TWO of these values make a valid tuple. How many times/loops do I need to make to find the valid tuple. The formula is I^P, where P = number of possibilities and I = the number of inputs. Hence, 6^2 = 36 loops/combinations we need to look through.
