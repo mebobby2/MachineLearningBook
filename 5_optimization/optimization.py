@@ -8,6 +8,14 @@ import math
 # 3. optimization.printschedule(s)
 # 4. optimization.schedulecost(s)
 
+# Play: dorms
+# 1. import optimization
+# 2. import dorms
+# 3. s=optimization.randomoptimize(dorm.domain,dorm.dormcost)
+# 4. dorm.dormcost(s)
+# 5. dorm.printsolution(s)
+# 6. optimization.geneticoptimize(dorm.domain,dorm.dormcost)
+
 people = [('Seymour', 'BOS'),
           ('Franny', 'DAL'),
           ('Zooey', 'CAK'),
