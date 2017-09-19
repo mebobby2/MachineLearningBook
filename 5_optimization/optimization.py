@@ -16,6 +16,11 @@ import math
 # 5. dorm.printsolution(s)
 # 6. optimization.geneticoptimize(dorm.domain,dorm.dormcost)
 
+# Note: geneticoptimize only works with dorms if mutatations
+# are turned off. This is due to the way the dorm cost
+# function works where it generates slots and trims from
+# the list
+
 people = [('Seymour', 'BOS'),
           ('Franny', 'DAL'),
           ('Zooey', 'CAK'),
