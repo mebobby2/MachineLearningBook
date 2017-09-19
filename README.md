@@ -128,6 +128,6 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 132
+Upto page 133
 
-The Cost Function
+Network Visualization
