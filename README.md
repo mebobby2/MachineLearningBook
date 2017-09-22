@@ -133,7 +133,3 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 Upto page 140
 
 Chapter 6
-
-Before that:
-Find out what vector cross-product is
-Debug why crosscount is always returning 0
