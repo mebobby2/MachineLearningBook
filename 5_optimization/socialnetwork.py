@@ -36,8 +36,6 @@ def crosscount(v):
             (x1,y1),(x2,y2) = loc[links[i][0]],loc[links[i][1]]
             (x3,y3),(x4,y4) = loc[links[j][0]],loc[links[j][1]]
 
-            print "%d,%d,%d,%d,%d,%d,%d,%d" % (x1,x2,x3,x4,y1,y2,y3,y4)
-
             den=(y4-y3)*(x2-x1)-(x4-x3)*(y2-y1)
 
             # den==0 if the lines are parallel
@@ -47,7 +45,6 @@ def crosscount(v):
             ua=((x4-x3)*(y1-y3)-(y4-y3)*(x1-x3))/den
             ub=((x2-x1)*(y1-y3)-(y2-y1)*(x1-x3))/den
 
-            # print "ua = %f, ub = %f" % (ua, ub)
             # If the fraction is between 0 and 1 for both lines
             # then they cross each other
             if ua>0 and ua<1 and ub>0 and ub<1:
