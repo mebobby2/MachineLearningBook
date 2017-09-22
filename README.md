@@ -130,6 +130,10 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 135
+Upto page 140
 
-Add crosscount to socialnetwork.py:
+Chapter 6
+
+Before that:
+Find out what vector cross-product is
+Debug why crosscount is always returning 0

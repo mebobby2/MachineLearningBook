@@ -6,7 +6,7 @@ import math
 # socialnetwork.crosscount(sol)
 # sol=optimization.annealingoptimize(socialnetwork.domain, socialnetwork.crosscount,step=50,cool=0.99)
 # socialnetwork.crosscount(sol)
-# sol
+# socialnetwork.drawnetwork(sol)
 
 people = ['Charlie', 'Augustus', 'Veruca', 'Violet', 'Mike', 'Joe', 'Willy', 'Miranda']
 
@@ -49,6 +49,37 @@ def crosscount(v):
             # then they cross each other
             if ua>0 and ua<1 and ub>0 and ub<1:
                 total+=1
+
+        for i in range(len(people)):
+            for j in range(i+1,len(people)):
+                # Get the locations of the two nodes
+                (x1,y1),(x2,y2) = loc[people[i]],loc[people[j]]
+
+                # Find the distance between them
+                dist = math.sqrt(math.pow(x1-x2,2) + math.pow(y1-y2,2))
+                # Penalize any nodes closer than 50 pixels
+                if dist < 50:
+                    total+=(1.0-(dist/50.0))
     return total
 
 domain = [(10,370)] * (len(people)*2)
+
+from PIL import Image,ImageDraw
+
+def drawnetwork(sol):
+    # Create the image
+    img = Image.new('RGB', (400,400),(255,255,255))
+    draw = ImageDraw.Draw(img)
+
+    # Create the position dict
+    pos = dict([(people[i],(sol[i*2],sol[i*2+1])) for i in range(0, len(people))])
+
+    # Draw links
+    for (a,b) in links:
+        draw.line((pos[a],pos[b]),fill=(255,0,0))
+
+    # Draw people
+    for n,p in pos.items():
+        draw.text(p, n, (0,0,0))
+
+    img.show()
