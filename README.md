@@ -120,6 +120,14 @@ Whether a particular optimization method will work depends very much on the prob
 
 A useful rule when creating a cost function is, if possible, to make the perfect solu- tion (which in this example is everyone being assigned to their top choice) have a cost of zero. In this case, you’ve already determined that the perfect solution is impossible, but knowing that its cost is zero gives you an idea of how close you are to it. The other advantage of this rule is that you can tell an optimization algorithm to stop searching for better solutions if it ever finds a perfect solution.
 
+### Features
+A feature is anything that you can determine as being either present or absent in the item. When considering documents for classification, the items are the docu- ments and the features are the words in the document. When using words as fea- tures, the assumption is that some words are more likely to appear in spam than in nonspam, which is the basic premise underlying most spam filters. Features don’t have to be individual words, however; they can be word pairs or phrases or anything else that can be classified as absent or present in a particular document.
+
+The other thing to consider when deciding on features is how well they will divide the set of documents into the target categories. For example, the code for getwords above reduces the total number of features by converting them to lowercase. This means it will recognize that a capitalized word at the start of a sentence is the same as when that word is all lowercase in the middle of a sentence—a good thing, since words with different capitalization usually have the same meaning. However, this function will completely miss the SHOUTING style used in many spam messages, which may be vital for dividing the set into spam and nonspam. Another alternative might be to have a feature that is deemed present if more than half the words are uppercase.
+
+## Assumed Probability
+Used when you have very little information about the feature in question. An assumed probability of 0.5 is a safe number simply because it is halfway between 0 and 1. However, it’s possible that you might have better background information than that, even on a completely untrained classifier. For example, one person who begins training a spam filter can use probabilities from other people’s already-trained spam filters as the assumed probabilities. The user still gets a spam filter personalized for him, but the filter is better able to handle words that it has come across very infrequently.
+
 ### Maths
 #### Number of combinations
 Let's say I have six values, A, B, C, D, E, F. And TWO of these values make a valid tuple. How many times/loops do I need to make to find the valid tuple. The formula is I^P, where P = number of possibilities and I = the number of inputs. Hence, 6^2 = 36 loops/combinations we need to look through.
@@ -130,6 +138,6 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 140
+Upto page 146
 
-Chapter 6
+A Naïve Classifier
