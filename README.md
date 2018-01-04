@@ -128,6 +128,9 @@ The other thing to consider when deciding on features is how well they will divi
 ## Assumed Probability
 Used when you have very little information about the feature in question. An assumed probability of 0.5 is a safe number simply because it is halfway between 0 and 1. However, it’s possible that you might have better background information than that, even on a completely untrained classifier. For example, one person who begins training a spam filter can use probabilities from other people’s already-trained spam filters as the assumed probabilities. The user still gets a spam filter personalized for him, but the filter is better able to handle words that it has come across very infrequently.
 
+## naïve Bayesian classifier
+Is called naïve because it assumes that the probabilities being combined are independent of each other. That is, the probability of one word in the document being in a specific category is unrelated to the probability of the other words being in that category. This is actually a false assumption, since you’ll probably find that documents containing the word “casino” are much more likely to contain the word “money” than documents about Python programming are.
+
 ### Maths
 #### Number of combinations
 Let's say I have six values, A, B, C, D, E, F. And TWO of these values make a valid tuple. How many times/loops do I need to make to find the valid tuple. The formula is I^P, where P = number of possibilities and I = the number of inputs. Hence, 6^2 = 36 loops/combinations we need to look through.
@@ -138,6 +141,8 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 146
+Upto page 150
 
-A Naïve Classifier
+The Fisher Method
+
+Before that: Find out why my cl.classify does not give same probability as the book
