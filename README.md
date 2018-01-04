@@ -144,5 +144,3 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 Upto page 150
 
 The Fisher Method
-
-Before that: Find out why my and cl.prob and cl.classify does not give same probability as the book. Use debug statements inside the code to understand it.

@@ -119,7 +119,7 @@ class naivebayes(classifier):
 
         # Multiply the probabilites of all the features together
         p=1
-        for f in features: p*self.weightedprob(f, cat, self.fprob)
+        for f in features: p*=self.weightedprob(f, cat, self.fprob)
         return p
 
     def prob(self, item, cat):
