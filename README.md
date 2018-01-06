@@ -141,6 +141,6 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 150
+Upto page 152
 
-The Fisher Method
+Combining the Probabilities˝

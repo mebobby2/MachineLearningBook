@@ -151,3 +151,26 @@ class naivebayes(classifier):
     def getthreshold(self, cat):
         if cat not in self.thresholds: return 1.0
         return self.thresholds[cat]
+
+# import docclass
+# cl=docclass.fisherclassifier(docclass.getwords) >>> docclass.sampletrain(cl)
+# docclass.sampletrain(cl)
+# cl.cprob('quick','good')
+# cl.cprob('money','bad')
+
+# To account for overestimating probabilities due to small training data set, we use the weighted probability.
+# Weighted probability starts all probabilities at 0.5 and allows them to move toward other probabilities as the class is trained
+# cl.weightedprob('money','bad',cl.cprob)
+class fisherclassifier(classifier):
+    def cprob(self, f, cat):
+        # The frequency of this feature in this category
+        clf = self.fprob(f, cat)
+        if clf == 0: return 0
+
+        # The frequency of this feature in all the categories
+        freqsum = sum([self.fprob(f, c) for c in self.categories()])
+
+        # The probability is the frequency in this category divided by the overall frequency
+        p = clf/freqsum
+
+        return p
