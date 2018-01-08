@@ -1,6 +1,13 @@
 import feedparser
 import re
 
+# import feedfilter
+# import docclass
+# cl=docclass.fisherclassifier(docclass.getwords)
+# cl.setdb('python_feed.db')
+# feedfilter.read('python_search.xml',cl)
+
+
 # Takes a filename of URL of a blog feed and classifies the entries
 def read(feed, classifier):
     # Get the feed entries and loop over them
