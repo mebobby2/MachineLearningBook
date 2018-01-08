@@ -158,10 +158,23 @@ class naivebayes(classifier):
 # cl.cprob('quick','good')
 # cl.cprob('money','bad')
 
+# cl.fisherprob('quick rabbit','good')
+# cl.fisherprob('quick rabbit','bad')
+
+# cl.classify('quick rabbit')
+# cl.classify('quick money')
+# cl.setminimum('bad',0.8)
+# cl.setminimum('good',0.4)
+# cl.classify('quick money')
+
 # To account for overestimating probabilities due to small training data set, we use the weighted probability.
 # Weighted probability starts all probabilities at 0.5 and allows them to move toward other probabilities as the class is trained
 # cl.weightedprob('money','bad',cl.cprob)
 class fisherclassifier(classifier):
+    def __init__(self, getfeatures):
+        classifier.__init__(self, getfeatures)
+        self.minimums = {}
+
     def cprob(self, f, cat):
         # The frequency of this feature in this category
         clf = self.fprob(f, cat)
@@ -174,3 +187,43 @@ class fisherclassifier(classifier):
         p = clf/freqsum
 
         return p
+
+    def fisherprob(self, item, cat):
+        # Multiplying all the probabilities together
+        p = 1
+        features = self.getfeatures(item)
+        for f in features:
+            p *= (self.weightedprob(f, cat, self.cprob))
+
+        # Take the natural log and multiply by -2
+        fscore =- 2*math.log(p)
+
+        # Use the inverse chi2 function to get a probability
+        return self.invchi2(fscore, len(features) * 2)
+
+    def invchi2(self, chi, df):
+        m = chi / 2.0
+        sum = term = math.exp(-m)
+        for i in range(1, df//2): # // operator is Floor division - division that results into whole number adjusted to the left in the number line
+            term *= m / i
+            sum += term
+        return min(sum, 1.0)
+
+    def classify(self, item, default = None):
+        # Lopp through looking for the best resutl
+        best = default
+        max = 0.0
+        for c in self.categories():
+            p = self.fisherprob(item, c)
+            # Make sure it exceeds its minimum
+            if p > self.getminimum(c) and p > max:
+                best = c
+                max = p
+        return best
+
+    def setminimum(self, cat, min):
+        self.minimums[cat] = min
+
+    def getminimum(self, cat):
+        if cat not in self.minimums: return 0
+        return self.minimums[cat]
