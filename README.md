@@ -141,6 +141,6 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 157
+Upto page 159
 
-Filtering Blog Feeds
+Improving Feature Detection
