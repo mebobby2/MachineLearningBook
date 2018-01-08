@@ -141,6 +141,6 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 152
+Upto page 157
 
-Combining the Probabilities˝
+Filtering Blog Feeds
