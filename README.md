@@ -125,11 +125,16 @@ A feature is anything that you can determine as being either present or absent i
 
 The other thing to consider when deciding on features is how well they will divide the set of documents into the target categories. For example, the code for getwords above reduces the total number of features by converting them to lowercase. This means it will recognize that a capitalized word at the start of a sentence is the same as when that word is all lowercase in the middle of a sentence—a good thing, since words with different capitalization usually have the same meaning. However, this function will completely miss the SHOUTING style used in many spam messages, which may be vital for dividing the set into spam and nonspam. Another alternative might be to have a feature that is deemed present if more than half the words are uppercase.
 
-## Assumed Probability
+### Assumed Probability
 Used when you have very little information about the feature in question. An assumed probability of 0.5 is a safe number simply because it is halfway between 0 and 1. However, it’s possible that you might have better background information than that, even on a completely untrained classifier. For example, one person who begins training a spam filter can use probabilities from other people’s already-trained spam filters as the assumed probabilities. The user still gets a spam filter personalized for him, but the filter is better able to handle words that it has come across very infrequently.
 
-## naïve Bayesian classifier
+### naïve Bayesian classifier
 Is called naïve because it assumes that the probabilities being combined are independent of each other. That is, the probability of one word in the document being in a specific category is unrelated to the probability of the other words being in that category. This is actually a false assumption, since you’ll probably find that documents containing the word “casino” are much more likely to contain the word “money” than documents about Python programming are.
+
+### Neural Networks over Bayesian classifiers
+Neural networks and support-vector machines have one big advantage over the Bqyesian classifiers: they can capture more complex relationships between the input features. In a Bayesian classifier, every feature has a probability for each category, and you combine the probabilities to get an overall likelihood. In a neural network, the probability of a feature can change depending on the presence or absence of other features. It may be that you’re trying to block online-casino spam but you’re also interested in horse betting, in which case the word “casino” is bad unless the word “horse” is somewhere else in the email message. Naïve Bayesian classifiers cannot capture this interdependence, and neural networks can.
+
+
 
 ### Maths
 #### Number of combinations
@@ -141,6 +146,6 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 159
+Upto page 65
 
-Improving Feature Detection
+CHAPTER 7
