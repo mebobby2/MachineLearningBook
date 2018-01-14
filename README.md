@@ -146,6 +146,6 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 65
+Upto page 165
 
 CHAPTER 7
