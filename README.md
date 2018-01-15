@@ -146,6 +146,6 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 165
+Upto page 170
 
-CHAPTER 7
+Gini Impurity
