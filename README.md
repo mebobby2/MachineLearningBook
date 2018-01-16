@@ -135,7 +135,7 @@ Is called naïve because it assumes that the probabilities being combined are i
 Neural networks and support-vector machines have one big advantage over the Bqyesian classifiers: they can capture more complex relationships between the input features. In a Bayesian classifier, every feature has a probability for each category, and you combine the probabilities to get an overall likelihood. In a neural network, the probability of a feature can change depending on the presence or absence of other features. It may be that you’re trying to block online-casino spam but you’re also interested in horse betting, in which case the word “casino” is bad unless the word “horse” is somewhere else in the email message. Naïve Bayesian classifiers cannot capture this interdependence, and neural networks can.
 
 ### Gini Impurity
-First, a definition: Gini impurity is a measure of how often a randomly chosen element from the set would be incorrectly labeled if it were randomly labeled according to the distribution of labels in the subset.
+First, a definition: Gini impurity is a measure of how often a randomly chosen element from the set would be incorrectly labeled if it were randomly labeled according to the distribution of labels in the subset. The higher this probability, the worse the split. A probability of zero is great because it tells you that everything is already in the right set.
 
 #### Question:
 Say you have 3 classes of balls: red, green blue. The odds of any colored ball appearing are red = 4/10, blue = 3/10, green = 3/10. Misclassifying red is calculated as 4/10*(3/10 + 3/10) or the odds of picking "True Class" * "Wrong Class".
