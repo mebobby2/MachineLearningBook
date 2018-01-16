@@ -134,6 +134,25 @@ Is called naïve because it assumes that the probabilities being combined are i
 ### Neural Networks over Bayesian classifiers
 Neural networks and support-vector machines have one big advantage over the Bqyesian classifiers: they can capture more complex relationships between the input features. In a Bayesian classifier, every feature has a probability for each category, and you combine the probabilities to get an overall likelihood. In a neural network, the probability of a feature can change depending on the presence or absence of other features. It may be that you’re trying to block online-casino spam but you’re also interested in horse betting, in which case the word “casino” is bad unless the word “horse” is somewhere else in the email message. Naïve Bayesian classifiers cannot capture this interdependence, and neural networks can.
 
+### Gini Impurity
+First, a definition: Gini impurity is a measure of how often a randomly chosen element from the set would be incorrectly labeled if it were randomly labeled according to the distribution of labels in the subset.
+
+#### Question:
+Say you have 3 classes of balls: red, green blue. The odds of any colored ball appearing are red = 4/10, blue = 3/10, green = 3/10. Misclassifying red is calculated as 4/10*(3/10 + 3/10) or the odds of picking "True Class" * "Wrong Class".
+
+Why do you multiply, instead of say add, to find the odds of picking the wrong red ball?
+
+#### Answer:
+The probability that a ball is red is 0.4. You can only make a mistake about a red ball if the ball is, in fact, red.
+
+Assuming that the guess is based precisely on the probability distribution of the balls, then a guess of blue has probability 0.3 and equally a guess of green has probability 0.3. If the ball really is red, these are the incorrect guesses, since the only other possible guess is correct.
+
+If two events are independent, the probability that both of them occur (P and Q) is the product of their probabilities. If two events are mutually exclusive, then the probability that one of them occurs (P or Q) is the sum of their probabilities.
+
+So the probability that a ball is red and is misclassified (as blue or green) is 0.4 * (0.3 + 0.3).
+
+To that, we'd have to add the probability of a blue ball being misclassified as red or green (0.3 * (0.4 + 0.3)) and the probability of a green ball being misclassified as blue or red (0.3 * (0.3 + 0.4)) for a total of 0.66. That's extremely close to the maximum value of 2/3 (when all the probabilities are equal).
+
 
 
 ### Maths
