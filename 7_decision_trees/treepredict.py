@@ -51,3 +51,16 @@ def uniquecounts(rows):
         if r not in results: results[r] = 0
         results[r] += 1
     return results
+
+# Probability that a randomly placed item will be in the wrong category
+def giniimpurity(rows):
+    total = len(rows)
+    counts = uniquecounts(rows)
+    imp = 0
+    for k1 in counts:
+        p1 = float(counts[k1])/total
+        for k2 in counts:
+            if k1 == k2: continue
+            p2 = float(counts[k2])/total
+            imp += p1*p2
+    return imp

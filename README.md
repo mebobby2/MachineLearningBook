@@ -146,6 +146,6 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 170
+Upto page 171
 
-Gini Impurity
+Entropy
