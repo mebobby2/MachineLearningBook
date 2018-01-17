@@ -169,6 +169,24 @@ Logarithm: log2(64) = 6
 
 The base-10, or default base, is usually written as log(x). To change base, divide the logs. E.g. To change from base 10 to base 2: log2(x) = log(x)/log(2)
 
+#### Weighted Average
+##### The Arithmetic Mean/Average
+When you find a mean for a set of numbers, all the numbers carry an equal weight. For example, if you want to find the arithmetic mean of 1, 3, 5, 7, and 10: ( 1 + 3 + 5 + 7 + 10) / 5 = 5.2
+
+##### The Weighted Mean/Average
+In some cases, you might want a number to have more weight. In that case, you’ll want to find the weighted mean. To find the weighted mean:
+* Multiply the numbers in your data set by the weights
+* Add the results up
+
+For that set of number above with equal weights (1/5 for each number), the math to find the weighted mean would be:
+1(*1/5) + 3(*1/5) + 5(*1/5) + 7(*1/5) + 10(*1/5) = 5.2
+
+Note: If all the weights are equal, then the weighted mean equals the arithmetic mean.
+
+Let's change the weights:
+1(*3/5) + 3(*1/5) + 5(*1/5) + 7(*2/5) + 10(*1/5) = 7
+
+
 
 
 ## Source code for book

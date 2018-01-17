@@ -117,10 +117,10 @@ def buildtree(rows, scoref=entropy):
                 best_gain = gain
                 best_criteria = (col, value)
                 best_sets = (set1, set2)
-        # Create the subbranches
-        if best_gain > 0:
-            trueBranch = buildtree(best_sets[0])
-            falseBranch = buildtree(best_sets[1])
-            return decisionnode(col = best_criteria[0], value = best_criteria[1], tb = trueBranch, fb = falseBranch)
-        else:
-            return decisionnode(results = uniquecounts(rows))
+    # Create the subbranches
+    if best_gain > 0:
+        trueBranch = buildtree(best_sets[0])
+        falseBranch = buildtree(best_sets[1])
+        return decisionnode(col = best_criteria[0], value = best_criteria[1], tb = trueBranch, fb = falseBranch)
+    else:
+        return decisionnode(results = uniquecounts(rows))
