@@ -1,3 +1,10 @@
+# import treepredict
+# treepredict.giniimpurity(treepredict.my_data)
+# treepredict.entropy(treepredict.my_data)
+# set1,set2=treepredict.divideset(treepredict.my_data,2,'yes')
+# treepredict.entropy(set1)
+# treepredict.giniimpurity(set1)
+
 my_data = [['slashdot', 'USA', 'yes', 18, 'None'],
            ['google', 'France', 'yes', 23, 'Premium'],
            ['digg', 'USA', 'yes', 24, 'Basic'],
@@ -26,7 +33,7 @@ class decisionnode:
 
 
 # import treepredict
-# treepredict.divideset(treepredict.my_data, 2, ''yes')
+# treepredict.divideset(treepredict.my_data, 2, 'yes')
 
 # Divides a set on a specific column. Can handle numeric or nominal
 def divideset(rows, column, value):
@@ -47,7 +54,7 @@ def uniquecounts(rows):
     results = {}
     for row in rows:
         # The result is the last column
-        r = row[len(row)-1]
+        r = row[len(row) - 1]
         if r not in results: results[r] = 0
         results[r] += 1
     return results
@@ -58,9 +65,62 @@ def giniimpurity(rows):
     counts = uniquecounts(rows)
     imp = 0
     for k1 in counts:
-        p1 = float(counts[k1])/total
+        p1 = float(counts[k1]) / total
         for k2 in counts:
             if k1 == k2: continue
-            p2 = float(counts[k2])/total
-            imp += p1*p2
+            p2 = float(counts[k2]) / total
+            imp += p1 * p2
     return imp
+
+# Entropy is the sum of p(x)log(p(x)) across all the different possible results
+def entropy(rows):
+    from math import log
+
+    # Entropy formual expects the log is of base 2
+    def log2(x): return log(x) / log(2)
+    results = uniquecounts(rows)
+    ent = 0.0
+    for r in results.keys():
+        p = float(results[r]) / len(rows)
+        ent = ent - p * log2(p)
+    return ent
+
+
+# import treepredict
+# tree=treepredict.buildtree(treepredict.my_data)
+def buildtree(rows, scoref=entropy):
+    if len(rows) == 0:
+        return decisionnode()
+    current_score = scoref(rows)
+
+    # Set up some variables to track the best criteria
+    best_gain = 0.0
+    best_criteria = None
+    best_sets = None
+
+    column_count = len(rows[0]) - 1
+    for col in range(0, column_count):
+        # Generate the list of different values in this column
+        column_values = {}
+        for row in rows:
+            column_values[row[col]] = 1
+        # Now try dividing the rows up for each value in this column
+        for value in column_values.keys():
+            (set1, set2) = divideset(rows, col, value)
+
+            # Information gain - To determine which attribute is the best to divide on, the information
+            # gain is calculated. Information gain is the difference between the current entropy and
+            # the weighted-average entropy of the two new groups.
+            p = float(len(set1))/len(rows)
+            gain = current_score - p*scoref(set1) - (1-p)*scoref(set2)
+            if gain > best_gain and len(set1) > 0 and len(set2) > 0:
+                best_gain = gain
+                best_criteria = (col, value)
+                best_sets = (set1, set2)
+        # Create the subbranches
+        if best_gain > 0:
+            trueBranch = buildtree(best_sets[0])
+            falseBranch = buildtree(best_sets[1])
+            return decisionnode(col = best_criteria[0], value = best_criteria[1], tb = trueBranch, fb = falseBranch)
+        else:
+            return decisionnode(results = uniquecounts(rows))

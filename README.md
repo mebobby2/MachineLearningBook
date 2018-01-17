@@ -159,12 +159,23 @@ To that, we'd have to add the probability of a blue ball being misclassified as 
 #### Number of combinations
 Let's say I have six values, A, B, C, D, E, F. And TWO of these values make a valid tuple. How many times/loops do I need to make to find the valid tuple. The formula is I^P, where P = number of possibilities and I = the number of inputs. Hence, 6^2 = 36 loops/combinations we need to look through.
 
+#### Probability Theory
+If two events are independent, the probability that both of them occur (P and Q) is the product of their probabilities. If two events are mutually exclusive, then the probability that one of them occurs (P or Q) is the sum of their probabilities.
+
+#### Logarithm
+Inverse operation of exponentiation.
+Exponentiation: 2^6 = 64
+Logarithm: log2(64) = 6
+
+The base-10, or default base, is usually written as log(x). To change base, divide the logs. E.g. To change from base 10 to base 2: log2(x) = log(x)/log(2)
+
+
 
 ## Source code for book
 https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 171
+Upto page 174
 
-Entropy
+Displaying the Tree
