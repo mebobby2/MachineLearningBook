@@ -194,6 +194,6 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 174
+Upto page 177
 
-Displaying the Tree
+Pruning the Tree
