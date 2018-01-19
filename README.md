@@ -194,6 +194,6 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 177
+Upto page 181
 
-Pruning the Tree
+Modeling Home Prices
