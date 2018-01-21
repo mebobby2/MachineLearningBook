@@ -195,6 +195,6 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 181
+Upto page 190
 
-Modeling Home Prices
+Chapter 8
