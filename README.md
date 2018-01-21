@@ -195,6 +195,6 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 190
+Upto page 192
 
-Chapter 8
+k-Nearest Neighbors
