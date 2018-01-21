@@ -153,7 +153,8 @@ So the probability that a ball is red and is misclassified (as blue or green) is
 
 To that, we'd have to add the probability of a blue ball being misclassified as red or green (0.3 * (0.4 + 0.3)) and the probability of a green ball being misclassified as blue or red (0.3 * (0.3 + 0.4)) for a total of 0.66. That's extremely close to the maximum value of 2/3 (when all the probabilities are equal).
 
-
+### When to Use Decision Trees
+Decision trees are probably not a good choice for problems with many numerical inputs and outputs, or with many complex relationships between numeri- cal inputs, such as in interpreting financial data or image analysis. Decision trees are great for datasets with a lot of categorical data and numerical data that has break- points. These trees are the best choice if understanding the decision-making process is important.
 
 ### Maths
 #### Number of combinations
