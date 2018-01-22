@@ -195,6 +195,6 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 192
+Upto page 195
 
-k-Nearest Neighbors
+Weighted Neighbors

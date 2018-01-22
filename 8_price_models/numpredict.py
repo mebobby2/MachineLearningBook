@@ -32,3 +32,31 @@ def wineprice(rating, age):
         price = price * (5 * ((age + 1)/peak_age))
     if price < 0: price = 0
     return price
+
+def euclidean(v1, v2):
+    d = 0.0
+    for i in range(len(v1)):
+        d += (v1[i] - v2[i]) ** 2
+    return math.sqrt(d)
+
+def getdistances(data, vec1):
+    distancelist = []
+    for i in range(len(data)):
+        vec2 = data[i]['input']
+        distancelist.append((euclidean(vec1, vec2), i))
+    distancelist.sort()
+    return distancelist
+
+# numpredict.knnestimate(data,(95.0,3.0))
+# numpredict.knnestimate(data,(99.0,5.0),k=1)
+def knnestimate(data,vec1,k=3):
+    # Get sorted distances
+    dlist = getdistances(data,vec1)
+    avg = 0.0
+
+    # Take the average of the top k results
+    for i in range(k):
+        idx = dlist[i][1]
+        avg += data[idx]['result']
+    avg = avg/k
+    return avg
