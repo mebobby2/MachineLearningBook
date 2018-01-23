@@ -49,7 +49,7 @@ def getdistances(data, vec1):
 
 # numpredict.knnestimate(data,(95.0,3.0))
 # numpredict.knnestimate(data,(99.0,5.0),k=1)
-def knnestimate(data,vec1,k=3):
+def knnestimate(data,vec1,k = 5):
     # Get sorted distances
     dlist = getdistances(data,vec1)
     avg = 0.0
@@ -60,6 +60,9 @@ def knnestimate(data,vec1,k=3):
         avg += data[idx]['result']
     avg = avg/k
     return avg
+
+def knn3(d,v): return knnestimate(d,v,k=3)
+def knn1(d,v): return knnestimate(d,v,k=1)
 
 def inverseweight(dist, num = 1.0, const = 0.1):
     return num / (dist + const)
@@ -88,3 +91,34 @@ def weightedknn(data, vec1, k = 5, weightf = gaussian):
         totalweight += weight
     avg = avg / totalweight
     return avg
+
+def knninverse(d,v):
+    return weightedknn(d,v, weightf = inverseweight)
+
+def dividedata(data,test = 0.05):
+    trainset = []
+    testset = []
+    for row in data:
+        if random() < test:
+            testset.append(row)
+        else:
+            trainset.append(row)
+    return trainset,testset
+
+def testalgorithm(algf,trainset,testset):
+    error = 0.0
+    for row in testset:
+        guess = algf(trainset,row['input'])
+        error += (row['result']-guess)**2
+    return error / len(testset)
+
+# numpredict.crossvalidate(numpredict.knnestimate,data)
+# numpredict.crossvalidate(knn3,data)
+# numpredict.crossvalidate(knn1,data)
+# numpredict.crossvalidate(numpredict.weightedknn,data)
+def crossvalidate(algf,data,trials = 100,test = 0.1):
+    error = 0.0
+    for i in range(trials):
+        trainset,testset = dividedata(data,test)
+        error += testalgorithm(algf,trainset,testset)
+    return error / trials

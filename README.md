@@ -187,6 +187,9 @@ Note: If all the weights are equal, then the weighted mean equals the arithmetic
 Let's change the weights:
 1(*3/5) + 3(*1/5) + 5(*1/5) + 7(*2/5) + 10(*1/5) = 7
 
+#### Squaring
+Squaring the numbers is common practice because it makes large differences count for even more. This means an algorithm that is very close most of the time but far off occasionally will fare worse than an algorithm that is always somewhat close. This is often desired behavior, but there are situations in which making a big mistake is occasionally acceptable if accuracy is very high the rest of the time. When this is the case, you can modify the function to just add up the absolute values of the differences.
+
 
 
 
@@ -195,6 +198,6 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 195
+Upto page 201
 
-Weighted Neighbors
+Heterogeneous Variables
