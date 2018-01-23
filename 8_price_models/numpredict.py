@@ -2,21 +2,20 @@ from random import random, randint
 import math
 
 def wineset1():
-    rows = []
+    rows=[]
     for i in range(300):
         # Create a random age and rating
-        rating = random() * 50 + 50
-        age = random() * 50
+        rating=random()*50+50
+        age=random()*50
 
         # Get reference price
-        price = wineprice(rating, age)
+        price=wineprice(rating,age)
 
         # Add some noise
-        price *= (random() * 0.4 + 0.8)
+        price*=(random()*0.2+0.9)
 
         # Add to the dataset
-        rows.append({'input': (rating, age), 'result': price})
-
+        rows.append({'input': (rating,age), 'result': price})
     return rows
 
 def wineprice(rating, age):
@@ -61,7 +60,6 @@ def knnestimate(data,vec1,k = 5):
     avg = avg/k
     return avg
 
-def knn3(d,v): return knnestimate(d,v,k=3)
 def knn1(d,v): return knnestimate(d,v,k=1)
 
 def inverseweight(dist, num = 1.0, const = 0.1):
