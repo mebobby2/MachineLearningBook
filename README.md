@@ -201,3 +201,5 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 Upto page 204
 
 Optimizing the Scale
+
+Before chapter ends: compare all the functions in the book source code to your code to make sure there are no differences to make sure subtle bugs are not in the code.
