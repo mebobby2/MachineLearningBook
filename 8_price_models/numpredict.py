@@ -46,7 +46,7 @@ def wineprice(rating, age):
     price = rating/2
     if age > peak_age:
         # Past its peak, goes bad in 5 years
-        price = price * (5 - (age - peak_age))
+        price = price * (5 - (age - peak_age)/2)
     else:
         # Increases to 5x original value as it approaches peak
         price = price * (5 * ((age + 1)/peak_age))
@@ -61,9 +61,15 @@ def euclidean(v1, v2):
 
 def getdistances(data, vec1):
     distancelist = []
+
+    # Loop over every item in the dataset
     for i in range(len(data)):
         vec2 = data[i]['input']
+
+        # Add the distance and the index
         distancelist.append((euclidean(vec1, vec2), i))
+
+    # Sort by distance
     distancelist.sort()
     return distancelist
 
