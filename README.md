@@ -198,6 +198,6 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 201
+Upto page 204
 
-Heterogeneous Variables
+Optimizing the Scale

@@ -5,18 +5,39 @@ def wineset1():
     rows=[]
     for i in range(300):
         # Create a random age and rating
-        rating=random()*50+50
-        age=random()*50
+        rating = random()*50+50
+        age = random()*50
 
         # Get reference price
-        price=wineprice(rating,age)
+        price = wineprice(rating,age)
 
         # Add some noise
-        price*=(random()*0.2+0.9)
+        price *= (random()*0.2+0.9)
 
         # Add to the dataset
         rows.append({'input': (rating,age), 'result': price})
     return rows
+
+def wineset2():
+    rows = []
+    for i in range(300):
+        rating = random()*50+50
+        age = random()*50
+        aisle = float(randint(1,20))
+        bottlesize = [375.0,750.0,1500.0][randint(0,2)]
+        price = wineprice(rating,age)
+        price *= (bottlesize/750)
+        price *= (random()*0.2+0.9)
+        rows.append({'input':(rating,age,aisle,bottlesize),
+                    'result':price})
+    return rows
+
+def rescale(data,scale):
+    scaleddata = []
+    for row in data:
+        scaled = [scale[i]*row['input'][i] for i in range(len(scale))]
+        scaleddata.append({'input':scaled,'result':row['result']})
+    return scaleddata
 
 def wineprice(rating, age):
     peak_age = rating - 50
@@ -60,7 +81,8 @@ def knnestimate(data,vec1,k = 5):
     avg = avg/k
     return avg
 
-def knn1(d,v): return knnestimate(d,v,k=1)
+def knn1(d,v): return knnestimate(d,v,k = 1)
+def knn3(d,v): return knnestimate(d,v,k = 3)
 
 def inverseweight(dist, num = 1.0, const = 0.1):
     return num / (dist + const)
