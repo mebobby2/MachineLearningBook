@@ -201,5 +201,3 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 Upto page 209
 
 The other option is to try to graph the actual probabilities for
-
-Before that: Figure out why my cumulativegraph pic does not look like the image in the book's.
