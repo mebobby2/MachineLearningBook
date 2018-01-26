@@ -1,6 +1,8 @@
 from random import random, randint
 import math
 
+weightdomain = [(0,20)] * 4
+
 def wineset1():
     rows=[]
     for i in range(300):
@@ -148,3 +150,15 @@ def crossvalidate(algf,data,trials = 100,test = 0.1):
         trainset,testset = dividedata(data,test)
         error += testalgorithm(algf,trainset,testset)
     return error / trials
+
+# import optimization
+# import numpredict
+# data = numpredict.wineset2()
+# costf=numpredict.createcostfunction(numpredict.knnestimate,data
+# optimization.annealingoptimize(numpredict.weightdomain,costf,step=2)
+# optimization.geneticoptimize(numpredict.weightdomain,costf,popsize=5)
+def createcostfunction(algf, data):
+    def costf(scale):
+        sdata = rescale(data, scale)
+        return crossvalidate(algf, sdata, trials = 10)
+    return costf
