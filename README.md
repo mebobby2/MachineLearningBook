@@ -198,6 +198,6 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 204
+Upto page 208
 
-Optimizing the Scale
+Graphing the Probabilities
