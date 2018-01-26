@@ -201,3 +201,5 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 Upto page 208
 
 Graphing the Probabilities
+
+Before that: install matplotlib. Was having permission problems.
