@@ -198,8 +198,8 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 208
+Upto page 209
 
-Graphing the Probabilities
+The other option is to try to graph the actual probabilities for
 
-Before that: install matplotlib. Was having permission problems.
+Before that: Figure out why my cumulativegraph pic does not look like the image in the book's.

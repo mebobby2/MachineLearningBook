@@ -1,5 +1,6 @@
 from random import random, randint
 import math
+from pylab import *
 
 weightdomain = [(0,20)] * 4
 
@@ -193,3 +194,11 @@ def probguess(data, vec1, low, high, k = 5, weightf = gaussian):
 
     # The probability is the weights in the range divided by all the weights
     return nweight/tweight
+
+# data = numpredict.wineset3()
+# numpredict.cumulativegraph(data,(1,1),6)
+def cumulativegraph(data,vec1,high,k = 5,weightf = gaussian):
+    t1 = arange(0.0,high,0.1)
+    cprob = array([probguess(data,vec1,0,v,k,weightf) for v in t1])
+    plot(t1, cprob)
+    show()
