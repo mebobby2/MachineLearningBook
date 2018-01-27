@@ -200,4 +200,4 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 Upto page 215
 
-You can now try this function in your Python session
+Oops, it looks like the search for “laptop” returns all sorts
