@@ -198,6 +198,8 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 209
+Upto page 215
 
-The other option is to try to graph the actual probabilities for
+You can now try this function in your Python session
+
+Before that: Convert ebaypredict to use the new eBay API
