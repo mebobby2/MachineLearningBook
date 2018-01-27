@@ -202,3 +202,26 @@ def cumulativegraph(data, vec1, high, k = 5, weightf = gaussian):
     cprob = array([probguess(data, vec1, 0, v, k, weightf) for v in t1])
     plot(t1, cprob)
     show()
+
+# data = numpredict.wineset3()
+# numpredict.probabilitygraph(data, (1, 1), 120)
+def probabilitygraph(data, vec1, high, k = 5, weightf = gaussian, ss = 5.0):
+    # Make a range for the prices
+    t1 = arange(0.0, high, 0.1)
+
+    # Get the probabilities for the entire range
+    probs = [probguess(data, vec1, v, v + 0.1, k, weightf) for v in t1]
+
+    # Smooth them by adding the gaussian of the nearby probabilities
+    smoothed = []
+    for i in range(len(probs)):
+        sv = 0.0
+        for j in range(0, len(probs)):
+            dist = abs(i - j) * 0.1
+            weight = gaussian(dist, sigma = ss)
+            sv += weight * probs[j]
+        smoothed.append(sv)
+    smoothed = array(smoothed)
+
+    plot(t1, smoothed)
+    show()
