@@ -34,7 +34,7 @@ def getSingleValue(node, tag):
             return tagNode.firstChild.nodeValue
     return '-1'
 
-
+# New eBay API: http://developer.ebay.com/devzone/finding/concepts/MakingACall.html
 def doSearch(query, categoryID=None, page=1):
     xml = "<?xml version='1.0' encoding='utf-8'?>" +\
         "<findItemsAdvancedRequest xmlns=\"http://www.ebay.com/marketplace/search/v1/services\">" +\
@@ -48,19 +48,19 @@ def doSearch(query, categoryID=None, page=1):
     xml += "</findItemsAdvancedRequest>"
 
     data = sendRequest('findItemsAdvanced', xml)
-    print 'Results' + data
     response = parseString(data)
-    itemNodes = response.getElementsByTagName('Item')
+    itemNodes = response.getElementsByTagName('item')
     results = []
     for item in itemNodes:
-        itemId = getSingleValue(item, 'ItemID')
-        itemTitle = getSingleValue(item, 'Title')
-        itemPrice = getSingleValue(item, 'CurrentPrice')
-        itemEnds = getSingleValue(item, 'EndTime')
+        itemId = getSingleValue(item, 'itemId')
+        itemTitle = getSingleValue(item, 'title')
+        itemPrice = getSingleValue(item, 'currentPrice')
+        itemEnds = getSingleValue(item, 'endTime')
         results.append((itemId, itemTitle, itemPrice, itemEnds))
     return results
 
 
+# NOTE:: Not yet modified to work with the new eBay API
 def getCategory(query='', parentID=None, siteID='0'):
     lquery = query.lower()
     xml = "<?xml version='1.0' encoding='utf-8'?>" +\

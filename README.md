@@ -201,5 +201,3 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 Upto page 215
 
 You can now try this function in your Python session
-
-Before that: Convert ebaypredict to use the new eBay API
