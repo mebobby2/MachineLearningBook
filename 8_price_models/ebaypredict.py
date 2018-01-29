@@ -9,6 +9,7 @@ serverUrl = 'svcs.ebay.com'
 # oldebayapi.getCategory('computers')
 # oldebayapi.getCategory('laptops',parentID=58058)
 # laptops=ebaypredict.doSearch('laptop',categoryID=51148)
+# oldebayapi.getItem(laptops[7][0])
 
 def getHeaders(apicall, siteID="0", compatabilityLevel="433"):
     headers = {

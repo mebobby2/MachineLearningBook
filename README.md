@@ -198,6 +198,8 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 216
+Upto page 217
 
-Getting Details for an Item
+Building a Price Predictor
+
+Before that: Figure out why oldebayapi.getItem(laptops[*][0]) is crashing for some laptops. It seems like some of the attributes in the xml response are missing. Also, figure out why 'attributes' are empty for all the laptops tested thus far.
