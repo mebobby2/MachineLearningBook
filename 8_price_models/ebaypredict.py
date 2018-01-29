@@ -4,6 +4,11 @@ from xml.dom.minidom import parse, parseString, Node
 appKey = 'BobbyLei-play-PRD-a5d705b3d-5455d325'
 serverUrl = 'svcs.ebay.com'
 
+# import ebaypredict
+# import oldebayapi
+# oldebayapi.getCategory('computers')
+# oldebayapi.getCategory('laptops',parentID=58058)
+# laptops=ebaypredict.doSearch('laptop',categoryID=51148)
 
 def getHeaders(apicall, siteID="0", compatabilityLevel="433"):
     headers = {
@@ -58,29 +63,3 @@ def doSearch(query, categoryID=None, page=1):
         itemEnds = getSingleValue(item, 'endTime')
         results.append((itemId, itemTitle, itemPrice, itemEnds))
     return results
-
-
-# NOTE:: Not yet modified to work with the new eBay API
-def getCategory(query='', parentID=None, siteID='0'):
-    lquery = query.lower()
-    xml = "<?xml version='1.0' encoding='utf-8'?>" +\
-        "<GetCategoriesRequest xmlns=\"urn:ebay:apis:eBLBaseComponents\">" +\
-        "<RequesterCredentials><eBayAuthToken>" +\
-        userToken +\
-        "</eBayAuthToken></RequesterCredentials>" +\
-        "<DetailLevel>ReturnAll</DetailLevel>" +\
-        "<ViewAllNodes>true</ViewAllNodes>" +\
-        "<CategorySiteID>" + siteID + "</CategorySiteID>"
-    if parentID == None:
-        xml += "<LevelLimit>1</LevelLimit>"
-    else:
-        xml += "<CategoryParent>" + str(parentID) + "</CategoryParent>"
-    xml += "</GetCategoriesRequest>"
-    data = sendRequest('GetCategories', xml)
-    categoryList = parseString(data)
-    catNodes = categoryList.getElementsByTagName('Category')
-    for node in catNodes:
-        catid = getSingleValue(node, 'CategoryID')
-        name = getSingleValue(node, 'CategoryName')
-        if name.lower().find(lquery) != -1:
-            print catid, name

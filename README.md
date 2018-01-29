@@ -198,6 +198,6 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 215
+Upto page 216
 
-Oops, it looks like the search for “laptop” returns all sorts
+Getting Details for an Item
