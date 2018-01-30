@@ -156,6 +156,13 @@ To that, we'd have to add the probability of a blue ball being misclassified as 
 ### When to Use Decision Trees
 Decision trees are probably not a good choice for problems with many numerical inputs and outputs, or with many complex relationships between numeri- cal inputs, such as in interpreting financial data or image analysis. Decision trees are great for datasets with a lot of categorical data and numerical data that has break- points. These trees are the best choice if understanding the decision-making process is important.
 
+### When to use k-Nearest Neighbours
+The k-nearest neighbors method has a few disadvantages. Making predictions is very computationally intensive because the distance to every point has to be calculated. Furthermore, in a dataset with many variables, it can be difficult to determine the appropriate weights or whether some variables should be eliminated. Optimization can help with this, but it can take a very long time to find a good solution with big datasets.
+
+The flip side to the computational intensity of making a prediction is that new observations can be added to the data without any computational effort. It’s also easy to interpret exactly what’s happening because you know it’s using the weighted value of other observation to make its predictions.
+
+Although determining weights can be tricky, once the best weights have been deter- mined, you can use them to better understand the characteristics of the dataset. Finally, you can create probability functions for times when you suspect there are other unmeasured variables in the dataset.
+
 ### Maths
 #### Number of combinations
 Let's say I have six values, A, B, C, D, E, F. And TWO of these values make a valid tuple. How many times/loops do I need to make to find the valid tuple. The formula is I^P, where P = number of possibilities and I = the number of inputs. Hence, 6^2 = 36 loops/combinations we need to look through.
@@ -198,8 +205,6 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 217
+Upto page 220
 
-Building a Price Predictor
-
-Before that: Figure out why oldebayapi.getItem(laptops[*][0]) is crashing for some laptops. It seems like some of the attributes in the xml response are missing. Also, figure out why 'attributes' are empty for all the laptops tested thus far.
+Chapter 9

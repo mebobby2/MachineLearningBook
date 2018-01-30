@@ -76,6 +76,7 @@ def getItem(itemID):
           "<DetailLevel>ItemReturnAttributes</DetailLevel>" +\
           "</GetItemRequest>"
     data = sendRequest('GetItem', xml)
+    print data
     result = {}
     response = parseString(data)
     result['title'] = getSingleValue(response, 'Title')

@@ -1,4 +1,5 @@
 import httplib
+import oldebayapi
 from xml.dom.minidom import parse, parseString, Node
 
 appKey = 'BobbyLei-play-PRD-a5d705b3d-5455d325'
@@ -63,4 +64,21 @@ def doSearch(query, categoryID=None, page=1):
         itemPrice = getSingleValue(item, 'currentPrice')
         itemEnds = getSingleValue(item, 'endTime')
         results.append((itemId, itemTitle, itemPrice, itemEnds))
+    return results
+
+def makeLaptopDataset():
+    searchResults = doSearch('laptop', categoryID=51148)
+    results = []
+    for r in searchResults:
+        item = oldebayapi.getItem(r[0])
+        att = item['attributes']
+        try:
+            data=(float(att['12']),float(att['26444']),
+                  float(att['26446']),float(att['25710']),
+                  float(item['feedback'])
+                 )
+            entry = { 'input': data, 'result': float(item['price']) }
+            results.append(entry)
+        except:
+            print item['title'] + ' failed'
     return results
