@@ -205,6 +205,8 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 220
+Upto page 228
 
-Chapter 9
+Categorical Features
+
+Before that: Google what linear classifiers are and make a note
