@@ -1,4 +1,6 @@
 from pylab import *
+from xml.dom.minidom import parseString
+from urllib2 import urlopen, quote
 
 class matchrow:
     def __init__(self, row, allnum=False):
@@ -65,3 +67,27 @@ def dpclassify(point,avgs):
 
     if y>0: return 0
     else: return 1
+
+def yesno(v):
+    if v == 'yes': return 1
+    elif v == 'no': return -1
+    else: return 0
+
+def matchcount(interest1, interest2):
+    l1 = interest1.split(':')
+    l2 = interest2.split(':')
+    x = 0
+    for v in l1:
+        if v in l2: x += 1
+    return x
+
+googlekey = 'AIzaSyBP-oqiisRzBpHEj7GMDov_yHLlsUzrdf4'
+loc_cache = {}
+def getlocation(address):
+    if address in loc_cache: return loc_cache[address]
+    data = urlopen('https://maps.googleapis.com/maps/api/geocode/xml?address=%s&key=%s' % (quote(address), googlekey)).read()
+    doc = parseString(data)
+    lat = doc.getElementsByTagName('lat')[0].firstChild.nodeValue
+    long = doc.getElementsByTagName('lng')[0].firstChild.nodeValue
+    loc_cache[address] = (float(lat), float(long))
+    return loc_cache[address]

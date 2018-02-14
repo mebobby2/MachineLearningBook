@@ -163,6 +163,10 @@ The flip side to the computational intensity of making a prediction is that new 
 
 Although determining weights can be tricky, once the best weights have been deter- mined, you can use them to better understand the characteristics of the dataset. Finally, you can create probability functions for times when you suspect there are other unmeasured variables in the dataset.
 
+### Linear Classifier
+A linear classifier, so it just finds a dividing line. This means that if there isn’t a straight line dividing the data or if there are multiple sections, as there are with the age-age comparison, the classifier will get some of the answers incorrect.
+
+
 ### Maths
 #### Number of combinations
 Let's say I have six values, A, B, C, D, E, F. And TWO of these values make a valid tuple. How many times/loops do I need to make to find the valid tuple. The formula is I^P, where P = number of possibilities and I = the number of inputs. Hence, 6^2 = 36 loops/combinations we need to look through.
@@ -197,6 +201,9 @@ Let's change the weights:
 #### Squaring
 Squaring the numbers is common practice because it makes large differences count for even more. This means an algorithm that is very close most of the time but far off occasionally will fare worse than an algorithm that is always somewhat close. This is often desired behavior, but there are situations in which making a big mistake is occasionally acceptable if accuracy is very high the rest of the time. When this is the case, you can modify the function to just add up the absolute values of the differences.
 
+#### Linear Relationship
+A relationship of direct proportionality that, when plotted on a graph, traces a straight line. In linear relationships, any given change in an independent variable will always produce a corresponding change in the dependent variable. For example, a linear relationship between production hours and output in a factory means that a 10 percent increase or decrease in hours will result in a 10 percent increase or decrease in the output.
+
 
 
 
@@ -205,8 +212,6 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 228
+Upto page 231
 
-Categorical Features
-
-Before that: Google what linear classifiers are and make a note
+Calculating the Distance
