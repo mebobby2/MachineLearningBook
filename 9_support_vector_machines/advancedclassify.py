@@ -91,3 +91,52 @@ def getlocation(address):
     long = doc.getElementsByTagName('lng')[0].firstChild.nodeValue
     loc_cache[address] = (float(lat), float(long))
     return loc_cache[address]
+
+
+def milesdistance(a1, a2):
+    lat1, long1 = getlocation(a1)
+    lat2, long2 = getlocation(a2)
+    latdif = 69.1 * (lat2 - lat1)
+    longdif = 53.0 * (long2 - long1)
+    return (latdif ** 2 + longdif ** 2) ** .5
+
+def loadnumerical():
+    oldrows = loadmatch('matchmaker.csv')
+    newrows = []
+    for row in oldrows:
+        d = row.data
+        data=[float(d[0]),yesno(d[1]),yesno(d[2]),
+              float(d[5]),yesno(d[6]),yesno(d[7]),
+              matchcount(d[3],d[8]),
+              milesdistance(d[4],d[9]),
+              row.match]
+        newrows.append(matchrow(data))
+    return newrows
+
+def scaledata(rows):
+    low = [999999999.0] * len(rows[0].data)
+    high = [-999999999.0] * len(rows[0].data)
+
+    # Find the lowest and highest values
+    for row in rows:
+        d = row.data
+        for i in range(len(d)):
+            if d[i] < low[i]: low[i] = d[i]
+            if d[i] > high[i]: high[i] = d[i]
+
+    # Create a function that scales data
+    def scaleinput(d):
+        # finds the lowest value and subtracts that amount from
+        # all the values to bring the range to a 0 starting point.
+        # It then divides the values by the difference between the
+        # lowest and highest values to convert them all to values
+        # between 0 and 1
+        return [(d.data[i] - low[i]) / (high[i] - low[i])
+                 for i in range(len(low))]
+
+    # Scale all the data
+    newrows = [matchrow(scaleinput(row.data) + [row.match])
+               for row in rows]
+
+    # Return the new data and the function
+    return newrows, scaleinput

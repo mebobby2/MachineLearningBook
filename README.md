@@ -212,6 +212,8 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 231
+Upto page 233
 
-Calculating the Distance
+Now you can try the linear classifier on a bigger set of variables
+
+Before that: work out why scaledata func is crashing
