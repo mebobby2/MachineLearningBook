@@ -131,7 +131,7 @@ def scaledata(rows):
         # It then divides the values by the difference between the
         # lowest and highest values to convert them all to values
         # between 0 and 1
-        return [(d.data[i] - low[i]) / (high[i] - low[i])
+        return [(d[i] - low[i]) / (high[i] - low[i])
                  for i in range(len(low))]
 
     # Scale all the data

@@ -215,5 +215,3 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 Upto page 233
 
 Now you can try the linear classifier on a bigger set of variables
-
-Before that: work out why scaledata func is crashing
