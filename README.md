@@ -212,6 +212,6 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 233
+Upto page 234
 
-Now you can try the linear classifier on a bigger set of variables
+Understanding Kernel Methods

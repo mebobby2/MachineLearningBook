@@ -113,6 +113,12 @@ def loadnumerical():
         newrows.append(matchrow(data))
     return newrows
 
+# import advancedclassify
+# numericalset=advancedclassify.loadnumerical()
+# scaledset,scalef=advancedclassify.scaledata(numericalset)
+# avgs=advancedclassify.lineartrain(scaledset)
+# advancedclassify.dpclassify(scalef(numericalset[0].data),avgs)
+
 def scaledata(rows):
     low = [999999999.0] * len(rows[0].data)
     high = [-999999999.0] * len(rows[0].data)
