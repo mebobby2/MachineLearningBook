@@ -204,6 +204,13 @@ Squaring the numbers is common practice because it makes large differences count
 #### Linear Relationship
 A relationship of direct proportionality that, when plotted on a graph, traces a straight line. In linear relationships, any given change in an independent variable will always produce a corresponding change in the dependent variable. For example, a linear relationship between production hours and output in a factory means that a 10 percent increase or decrease in hours will result in a 10 percent increase or decrease in the output.
 
+#### Dot Product
+The Dot Product multiplies two vectors. The dot product is usually written with a central dot, such as, a · b. The dot product  gives a number as an answer (a "scalar", not a vector).
+```
+a · b = |a| × |b| × cos(θ)
+```
+When two vectors are at right angles to each other, their dot product is zero.
+
 
 
 
