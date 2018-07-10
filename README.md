@@ -219,6 +219,6 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 234
+Upto page 238
 
-Understanding Kernel Methods
+Support-Vector Machines
