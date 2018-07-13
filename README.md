@@ -219,6 +219,6 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 238
+Upto page 240
 
-Support-Vector Machines
+Using LIBSVM
