@@ -219,6 +219,6 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 244
+Upto page 255
 
-It’s a lot of work to set up a Facebook session
+Non-Negative Matrix Factorization
