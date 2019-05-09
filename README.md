@@ -219,6 +219,6 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 255
+Upto page 261
 
-Non-Negative Matrix Factorization
+Now you need a way to gradually update the matrices to reduce the cost function
