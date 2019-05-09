@@ -1,0 +1,100 @@
+U.S. Senate intelligence panel subpoenas Trump's son: sources
+6.2495468416 ['intelligence', 'with', 'panel', 'donald', 'said', 'subpoenas']
+2.64908554611 ['president', 'donald', 'panel', 'said', 'that', 'trade']
+2.23951212276 ['subpoenas', 'said', 'house', 'donald', 'president', 'intelligence']
+
+Asia shares sink to six-week low as clock ticks toward U.S. tariff hike on Chinese goods
+3.24819593584 ['talks', 'house', 'china', 'trade', 'from', 'that']
+2.43258436482 ['china', 'trade', 'talks', 'with', 'broke', 'that']
+1.26362628036 ['trade', 'china', 'from', 'house', 'talks', 'broke']
+
+Deputy of Venezuela's Guaido arrested and dragged away by tow truck
+3.49154641863 ['intelligence', 'with', 'panel', 'donald', 'said', 'subpoenas']
+0.370722744146 ['broke', 'with', 'trade', 'that', 'donald', 'china']
+6.4663905038e-09 ['talks', 'donald', 'broke', 'china', 'with', 'that']
+
+Disney parks lift earnings, 'Avengers: Endgame' streaming date announced
+2.25571754877 ['company', 'said', 'that', 'talks', 'donald', 'from']
+1.34919813675e-18 ['that', 'president', 'company', 'school', 'said', 'china']
+1.1018216895e-56 ['from', 'talks', 'donald', 'president', 'said', 'company']
+
+U.S. House panel accuses Barr of contempt as Trump invokes executive privilege
+6.22413146762 ['panel', 'barr', 'donald', 'president', 'house', 'subpoenas']
+3.62808632822 ['house', 'donald', 'president', 'said', 'from', 'panel']
+2.47011944764 ['barr', 'panel', 'intelligence', 'house', 'subpoenas', 'said']
+
+House intel panel chairman subpoenas Barr for Mueller probe documents
+5.64846885224 ['house', 'barr', 'said', 'intelligence', 'panel', 'from']
+5.306452955 ['barr', 'panel', 'intelligence', 'house', 'subpoenas', 'said']
+2.45814121511 ['subpoenas', 'said', 'house', 'donald', 'president', 'intelligence']
+
+Trump, family to see 'substantial portions' of House subpoenas to banks
+4.93063036125 ['subpoenas', 'said', 'house', 'donald', 'president', 'intelligence']
+4.92772845192 ['house', 'donald', 'president', 'said', 'from', 'panel']
+1.11796192829 ['president', 'donald', 'panel', 'said', 'that', 'trade']
+
+Berkshire takes $377 million charge tied to solar company that U.S. linked to fraud
+4.58971649852 ['company', 'said', 'that', 'talks', 'donald', 'from']
+4.27147312415 ['that', 'president', 'company', 'school', 'said', 'china']
+1.59304418926 ['said', 'talks', 'broke', 'trade', 'that', 'china']
+
+Under pressure from Trump, GM in talks to sell idled Ohio plant
+7.16887053778 ['from', 'talks', 'donald', 'president', 'said', 'company']
+2.30870473958 ['company', 'said', 'that', 'talks', 'donald', 'from']
+1.77763889759 ['talks', 'house', 'china', 'trade', 'from', 'that']
+
+Two students arrested in Colorado school shooting make first appearance
+6.12613634423 ['school', 'that', 'donald', 'with', 'said', 'broke']
+2.66650130249e-25 ['trade', 'china', 'broke', 'that', 'with', 'president']
+2.01196117087e-28 ['that', 'president', 'company', 'school', 'said', 'china']
+
+Run? Hide? Fight? Lockdown? Two U.S. school shootings highlight differing responses
+6.11574342346 ['school', 'that', 'donald', 'with', 'said', 'broke']
+2.16006659692 ['that', 'president', 'company', 'school', 'said', 'china']
+0.00545394368866 ['trade', 'china', 'broke', 'that', 'with', 'president']
+
+Trump says Beijing 'broke' trade talk deals, pledges to keep tariffs on Chinese goods
+6.10863833116 ['broke', 'with', 'trade', 'that', 'donald', 'china']
+3.24228482531 ['trade', 'china', 'broke', 'that', 'with', 'president']
+2.75635033875 ['president', 'donald', 'panel', 'said', 'that', 'trade']
+
+Timeline: Key dates in the U.S.-China trade war
+6.04860480645 ['trade', 'china', 'from', 'house', 'talks', 'broke']
+3.20974018842 ['trade', 'china', 'broke', 'that', 'with', 'president']
+2.46306723766 ['china', 'trade', 'donald', 'broke', 'talks', 'that']
+
+Klobuchar pitches pragmatism as she seeks to carve identity in Democratic presidential field
+4.41805416468 ['that', 'president', 'company', 'school', 'said', 'china']
+2.16548789781 ['president', 'donald', 'panel', 'said', 'that', 'trade']
+2.93039143718e-05 ['trade', 'china', 'broke', 'that', 'with', 'president']
+
+Uber drivers go on strike in London and U.S. ahead of IPO, early protests sparse
+2.20165027067 ['that', 'president', 'company', 'school', 'said', 'china']
+0.00459420363985 ['broke', 'with', 'trade', 'that', 'donald', 'china']
+0.00202366260544 ['trade', 'china', 'broke', 'that', 'with', 'president']
+
+Trump says China 'broke the deal' in trade talks, will pay through tariffs
+5.41946198657 ['broke', 'with', 'trade', 'that', 'donald', 'china']
+5.04332363003 ['talks', 'donald', 'broke', 'china', 'with', 'that']
+3.48137070739 ['china', 'trade', 'donald', 'broke', 'talks', 'that']
+
+Wall St. falls as investors cautious on trade; Intel slides
+5.61743531965 ['trade', 'china', 'from', 'house', 'talks', 'broke']
+2.78418380898 ['from', 'talks', 'donald', 'president', 'said', 'company']
+2.49983691253 ['talks', 'house', 'china', 'trade', 'from', 'that']
+
+House Democrat to decide Thursday on going to court for Trump tax returns: Politico
+4.98675662518 ['house', 'donald', 'president', 'said', 'from', 'panel']
+2.18578265497 ['said', 'donald', 'president', 'talks', 'house', 'panel']
+1.31813109588 ['said', 'talks', 'broke', 'trade', 'that', 'china']
+
+Monthly border apprehensions reach highest level since 2007
+2.3823706534 ['said', 'talks', 'broke', 'trade', 'that', 'china']
+0.0483495887359 ['subpoenas', 'said', 'house', 'donald', 'president', 'intelligence']
+0.0213200766197 ['company', 'said', 'that', 'talks', 'donald', 'from']
+
+Huawei CFO to seek extradition stay citing Trump comments
+2.98452190065 ['from', 'talks', 'donald', 'president', 'said', 'company']
+2.86979873949 ['president', 'donald', 'panel', 'said', 'that', 'trade']
+0.21456531481 ['said', 'donald', 'president', 'talks', 'house', 'panel']
+

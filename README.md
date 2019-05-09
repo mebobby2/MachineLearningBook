@@ -219,6 +219,6 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 261
+Upto page 273
 
-Now you need a way to gradually update the matrices to reduce the cost function
+Chapter 11

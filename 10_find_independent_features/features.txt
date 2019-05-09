@@ -1,0 +1,100 @@
+['talks', 'donald', 'broke', 'china', 'with', 'that']
+(5.0433236300305122, u"Trump says China 'broke the deal' in trade talks, will pay through tariffs")
+(2.2614072022932081, u"Trump says Beijing 'broke' trade talk deals, pledges to keep tariffs on Chinese goods")
+(1.4739788834531566, u'Under pressure from Trump, GM in talks to sell idled Ohio plant')
+
+['said', 'talks', 'broke', 'trade', 'that', 'china']
+(2.3823706533985867, u'Monthly border apprehensions reach highest level since 2007')
+(2.1764493859648604, u"Trump says Beijing 'broke' trade talk deals, pledges to keep tariffs on Chinese goods")
+(2.0238439954322001, u"Trump says China 'broke the deal' in trade talks, will pay through tariffs")
+
+['china', 'trade', 'talks', 'with', 'broke', 'that']
+(2.4325843648203951, u'Asia shares sink to six-week low as clock ticks toward U.S. tariff hike on Chinese goods')
+(1.675707253269817, u"Trump says China 'broke the deal' in trade talks, will pay through tariffs")
+(1.5487128914997503, u'Timeline: Key dates in the U.S.-China trade war')
+
+['company', 'said', 'that', 'talks', 'donald', 'from']
+(4.5897164985196452, u'Berkshire takes $377 million charge tied to solar company that U.S. linked to fraud')
+(2.3087047395811826, u'Under pressure from Trump, GM in talks to sell idled Ohio plant')
+(2.2557175487691534, u"Disney parks lift earnings, 'Avengers: Endgame' streaming date announced")
+
+['broke', 'with', 'trade', 'that', 'donald', 'china']
+(6.1086383311568584, u"Trump says Beijing 'broke' trade talk deals, pledges to keep tariffs on Chinese goods")
+(5.4194619865740634, u"Trump says China 'broke the deal' in trade talks, will pay through tariffs")
+(0.37072274414587864, u"Deputy of Venezuela's Guaido arrested and dragged away by tow truck")
+
+['from', 'talks', 'donald', 'president', 'said', 'company']
+(7.1688705377782949, u'Under pressure from Trump, GM in talks to sell idled Ohio plant')
+(2.9845219006488231, u'Huawei CFO to seek extradition stay citing Trump comments')
+(2.7841838089780855, u'Wall St. falls as investors cautious on trade; Intel slides')
+
+['china', 'trade', 'donald', 'broke', 'talks', 'that']
+(3.4813707073906404, u"Trump says China 'broke the deal' in trade talks, will pay through tariffs")
+(2.463067237661329, u'Timeline: Key dates in the U.S.-China trade war')
+(1.0232625034649629, u'Asia shares sink to six-week low as clock ticks toward U.S. tariff hike on Chinese goods')
+
+['house', 'barr', 'said', 'intelligence', 'panel', 'from']
+(5.6484688522443642, u'House intel panel chairman subpoenas Barr for Mueller probe documents')
+(2.1072027485277025, u'Wall St. falls as investors cautious on trade; Intel slides')
+(0.98744951718748719, u'U.S. House panel accuses Barr of contempt as Trump invokes executive privilege')
+
+['talks', 'house', 'china', 'trade', 'from', 'that']
+(3.2481959358362076, u'Asia shares sink to six-week low as clock ticks toward U.S. tariff hike on Chinese goods')
+(2.4998369125276625, u'Wall St. falls as investors cautious on trade; Intel slides')
+(1.7776388975945356, u'Under pressure from Trump, GM in talks to sell idled Ohio plant')
+
+['that', 'president', 'company', 'school', 'said', 'china']
+(4.4180541646840963, u'Klobuchar pitches pragmatism as she seeks to carve identity in Democratic presidential field')
+(4.2714731241451078, u'Berkshire takes $377 million charge tied to solar company that U.S. linked to fraud')
+(2.2016502706746581, u'Uber drivers go on strike in London and U.S. ahead of IPO, early protests sparse')
+
+['subpoenas', 'said', 'house', 'donald', 'president', 'intelligence']
+(4.9306303612469922, u"Trump, family to see 'substantial portions' of House subpoenas to banks")
+(2.4581412151132382, u'House intel panel chairman subpoenas Barr for Mueller probe documents')
+(2.2395121227620511, u"U.S. Senate intelligence panel subpoenas Trump's son: sources")
+
+['trade', 'china', 'broke', 'that', 'with', 'president']
+(3.2422848253121521, u"Trump says Beijing 'broke' trade talk deals, pledges to keep tariffs on Chinese goods")
+(3.2097401884181438, u'Timeline: Key dates in the U.S.-China trade war')
+(0.81900719601726557, u"Trump says China 'broke the deal' in trade talks, will pay through tariffs")
+
+['said', 'donald', 'president', 'talks', 'house', 'panel']
+(2.1857826549652035, u'House Democrat to decide Thursday on going to court for Trump tax returns: Politico')
+(1.9716481483235406, u"U.S. Senate intelligence panel subpoenas Trump's son: sources")
+(1.6070491293241289, u'Under pressure from Trump, GM in talks to sell idled Ohio plant')
+
+['school', 'that', 'donald', 'with', 'said', 'broke']
+(6.1261363442295727, u'Two students arrested in Colorado school shooting make first appearance')
+(6.1157434234556565, u'Run? Hide? Fight? Lockdown? Two U.S. school shootings highlight differing responses')
+(3.1917990018756921e-08, u'Berkshire takes $377 million charge tied to solar company that U.S. linked to fraud')
+
+['barr', 'panel', 'intelligence', 'house', 'subpoenas', 'said']
+(5.306452955001447, u'House intel panel chairman subpoenas Barr for Mueller probe documents')
+(2.4701194476398336, u'U.S. House panel accuses Barr of contempt as Trump invokes executive privilege')
+(0.0074203863661759135, u"U.S. Senate intelligence panel subpoenas Trump's son: sources")
+
+['trade', 'china', 'from', 'house', 'talks', 'broke']
+(6.0486048064489548, u'Timeline: Key dates in the U.S.-China trade war')
+(5.6174353196510776, u'Wall St. falls as investors cautious on trade; Intel slides')
+(1.7860129120459303, u"Trump says China 'broke the deal' in trade talks, will pay through tariffs")
+
+['president', 'donald', 'panel', 'said', 'that', 'trade']
+(2.8697987394891107, u'Huawei CFO to seek extradition stay citing Trump comments')
+(2.7563503387457269, u"Trump says Beijing 'broke' trade talk deals, pledges to keep tariffs on Chinese goods")
+(2.6490855461149172, u"U.S. Senate intelligence panel subpoenas Trump's son: sources")
+
+['intelligence', 'with', 'panel', 'donald', 'said', 'subpoenas']
+(6.2495468416047135, u"U.S. Senate intelligence panel subpoenas Trump's son: sources")
+(3.4915464186330438, u"Deputy of Venezuela's Guaido arrested and dragged away by tow truck")
+(0.86482981336480658, u'House intel panel chairman subpoenas Barr for Mueller probe documents')
+
+['panel', 'barr', 'donald', 'president', 'house', 'subpoenas']
+(6.2241314676155106, u'U.S. House panel accuses Barr of contempt as Trump invokes executive privilege')
+(1.0053480086467788, u"U.S. Senate intelligence panel subpoenas Trump's son: sources")
+(0.29436961755797597, u'House intel panel chairman subpoenas Barr for Mueller probe documents')
+
+['house', 'donald', 'president', 'said', 'from', 'panel']
+(4.9867566251817079, u'House Democrat to decide Thursday on going to court for Trump tax returns: Politico')
+(4.9277284519162681, u"Trump, family to see 'substantial portions' of House subpoenas to banks")
+(3.6280863282170155, u'U.S. House panel accuses Barr of contempt as Trump invokes executive privilege')
+
