@@ -166,6 +166,11 @@ Although determining weights can be tricky, once the best weights have been dete
 ### Linear Classifier
 A linear classifier, so it just finds a dividing line. This means that if there isn’t a straight line dividing the data or if there are multiple sections, as there are with the age-age comparison, the classifier will get some of the answers incorrect.
 
+### Genetic Programming Versus Genetic Algorithms
+Genetic algorithms are an optimization technique that use the idea of evolutionary pressure to choose the best result. With any form of optimization, you have already selected an algorithm or metric and you're simply trying to find the best parameters for it.
+
+Like optimization, genetic programming requires a way to measure how good a solution is; but unlike optimization, the solutions are not just a set of parameters being applied to a given algorithm. Instead, the algorithm itself and all its parameters are designed automatically by means of evolutionary pressure.
+
 
 ### Maths
 #### Number of combinations
