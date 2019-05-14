@@ -224,6 +224,6 @@ https://github.com/arthur-e/Programming-Collective-Intelligence
 
 ## Upto
 
-Upto page 273
+Upto page 291
 
-Chapter 11
+A Simple Game
