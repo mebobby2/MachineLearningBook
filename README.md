@@ -221,9 +221,3 @@ When two vectors are at right angles to each other, their dot product is zero.
 
 ## Source code for book
 https://github.com/arthur-e/Programming-Collective-Intelligence
-
-## Upto
-
-Upto page 291
-
-A Simple Game
